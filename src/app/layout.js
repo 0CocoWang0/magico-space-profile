@@ -11,6 +11,14 @@ export const metadata = {
   viewport: "width=device-width, initial-scale=1.0",
   ogTitle: "Welcome to Keming Wang's World",
   ogType: "website",
+  icons:{
+    icon: [
+      {
+        url:"/favicon.ico",
+        href: "/favicon.ico",
+      }
+    ]
+  }
 };
 
 export default function RootLayout({ children }) {
