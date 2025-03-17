@@ -4,7 +4,7 @@ import Cursor from "@/components/Cursor";
 import Favicon from '/public/images/favicon.ico'
 
 export const metadata = {
-  title: "You're landing on Magico Space",
+  title: "You're landing in Magico Space",
   description: "About what Keming Wang did in various areas.",
   charset: "UTF-8",
   author: "Keming Wang",

@@ -18,6 +18,7 @@
   }
 }
 
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -31,6 +32,40 @@
     --foreground: #ededed;
   }
 }
+@media (max-width: 768px) {
+  #logo {
+    visibility: hidden;
+  }
+  #contact-button {
+    margin-left: 247px;
+    right: 0;
+    margin-top: 10px; /* Add space below navbar */
+  }
+
+  #bigname {
+      font-size: 7rem;
+      font-weight: 700;
+      line-height: 1;
+      justify-content: center;
+      display: flex;
+      color: #fff;
+      position:relative;
+      text-shadow: 2px 2px 5px rgba(60, 60, 60, 0.5);
+      z-index: 3;
+  }
+
+  #showcase {
+    margin: 0px -70px 20px;
+
+  }
+}
+
+@media (hover:none){
+  *{
+    cursor:none !important;
+  }
+}
+
 @keyframes bounceOut {
   0% {
       transform: scale(0.9);
@@ -68,20 +103,25 @@ body {
   font-family: DIN Alternate;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+  width: 100%;
 }
 
-#bigname {
-  font-size: 10rem;
-  font-weight: 700;
-  line-height: 1;
-  justify-content: center;
-  display: flex;
-  color: #fff;
-  position:relative;
-  text-shadow: 2px 2px 5px rgba(60, 60, 60, 0.5);
-  z-index: 3;
+@media (min-width: 768px) {
+  #bigname {
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: 1;
+    justify-content: center;
+    display: flex;
+    color: #fff;
+    position:relative;
+    text-shadow: 2px 2px 5px rgba(60, 60, 60, 0.5);
+    z-index: 3;
 
+  }
 }
+
 
 #bigname :hover{
   color: aqua;
@@ -96,6 +136,7 @@ body {
 }
 
 footer {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;

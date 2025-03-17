@@ -90,7 +90,7 @@ const Navbar = () => {
                             ))}
                         </ul>
                     </nav>
-                    <div className="relative" onClick={toggleDropdown}>
+                    <div id="contact-button" className="relative" onClick={toggleDropdown}>
                         <WiggleElement 
                             className="z-200 text-black bg-gradient-to-r from-blue-300 to-purple-400 hover:bg-gradient-to-br focus:ring-4 focus:outline-none dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2 text-center cursor-none"
     

@@ -14,6 +14,7 @@ export const viewport = {
 export default function Home() {
   return (
     <div className="cursor-none">
+      
       <Cursor />
       <Navbar />
       <div id="home" className="wrapper">

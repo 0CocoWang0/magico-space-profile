@@ -14,11 +14,11 @@ export default function Showcase() {
     ]
     return (
         <div id="showcase" className="flex justify-center p-4 mb-6">
-            <Image></Image>
             {showcasePhotos.map((photo, index) => (
                 <WiggleElement key={index} >
                     
                     <Image
+                        id="gallery"
                         src={photo.path}
                         alt={photo.title}
                         width={270}

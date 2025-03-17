@@ -3,6 +3,9 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const Cursor = () => {
+    const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+
     const x = useMotionValue(0);
     const y = useMotionValue(0);
     const [cursorTrial, setCursorTrial] = useState([]);
@@ -12,6 +15,11 @@ const Cursor = () => {
     const springY = useSpring(y, { stiffness: 1000, damping: 50 });
 
     useEffect(() => {
+        if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
+            setIsTouchDevice(true);
+          }
+        
+
         const moveCursor = (e) => {
             x.set(e.clientX);
             y.set(e.clientY);
@@ -27,6 +35,11 @@ const Cursor = () => {
             window.removeEventListener("mousemove", moveCursor);
         };
     }, [x, y]);
+
+    if (isTouchDevice) {
+        return null;
+    }
+ 
 
     return (
         <>
