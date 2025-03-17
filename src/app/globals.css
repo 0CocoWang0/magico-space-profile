@@ -32,7 +32,7 @@
     --foreground: #ededed;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 428px) {
   #logo {
     visibility: hidden;
   }
@@ -107,7 +107,7 @@ body {
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 428px) {
   #bigname {
     font-size: 10rem;
     font-weight: 700;

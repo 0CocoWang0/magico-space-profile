@@ -1,7 +1,6 @@
 import "./globals.css";
 import Image from "next/image";
-import Cursor from "@/components/Cursor";
-import Favicon from '/public/images/favicon.ico'
+
 
 export const metadata = {
   title: "You're landing in Magico Space",
@@ -12,7 +11,7 @@ export const metadata = {
   viewport: "width=device-width, initial-scale=1.0",
   ogTitle: "Welcome to Keming Wang's World",
   ogType: "website",
-  icons: [{rel:'icon', url:Favicon.src}]
+  
 };
 
 export default function RootLayout({ children }) {

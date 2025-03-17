@@ -79,8 +79,35 @@
   
   /* Fade out effect */
   .dropdown.fade-out {
-    opacity: 0;
+    animation: bounceUp 0.4 ease-out;
     
   }
 
+  .dropdown-link{
+    text-decoration: underline;
+    text-decoration-color: white;
+  }
   
+  @keyframes bounceDown {
+    0% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(3px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bounceUp {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(3px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }

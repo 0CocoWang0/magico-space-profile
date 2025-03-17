@@ -39,15 +39,8 @@ const Navbar = () => {
     }, []);
 
     const toggleDropdown = () => {
-        setDropdownVisible(true);
-        setFadeOut(false);
-
-        setTimeout(()=> {
-            setFadeOut(true);
-            setTimeout(()=> {
-                setDropdownVisible(false);
-            }, 500);
-        }, 3000);
+        setDropdownVisible(!dropdownVisible);
+        
     }
 
     return (
@@ -73,7 +66,7 @@ const Navbar = () => {
                                 }`}    
                                 key={index}                            
                                 >                                    
-                                        <a href={link.path} className="cursor-none">
+                                        
                                             <Link
                                                 to={link.path}
                                                 smooth={true}
@@ -84,7 +77,7 @@ const Navbar = () => {
                                             >
                                                 {link.title}
                                             </Link>
-                                        </a>
+                                        
                                     
                                 </WiggleElement>
                             ))}
@@ -99,11 +92,11 @@ const Navbar = () => {
                         </WiggleElement>
                         {dropdownVisible && (
                             <div className={`"absolute right-0 mt-2 w-48 bg-black shadow-lg rounded-lg py-2 px-3 z-100 animate-wiggle dropdown ${fadeOut ? "fade-out" : "show"}`}>
-                                <span class="absolute -left-1 -top-1 flex size-3">
-                                    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
-                                    <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span>
+                                <span className="absolute -left-1 -top-1 flex size-3">
+                                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                                    <span className="relative inline-flex size-3 rounded-full bg-sky-500"></span>
                                 </span>
-                                <p>"Hey! Why not find me at LinkedIn? :D "</p>
+                                <p>"Hey! Why not find me at <a href="https://www.linkedin.com/in/magicoco117/" target="_blank" rel="noopener noreferrer" className="underline decoration-sky-500 decoration-wavy">LinkedIn</a>? :D "</p>
                             </div>
                         )}
 

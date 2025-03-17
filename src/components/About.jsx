@@ -22,8 +22,8 @@ const About = () => {
 
         <WiggleElement className="flex-2  hover:bg-gradient-to-br border border-white/20  hover:border-white w-full col-span-2 relative bg-gradient-to-r from-blue-300 to-purple-400 rounded-4xl">
             <div className="text-black text-2xl felx flex-row p-10">
-                <p>More to come.</p>
-                <p className="text-sm">问就是还没做完</p>
+                <p>More to come...</p>
+                
             </div>
         </WiggleElement>
        
