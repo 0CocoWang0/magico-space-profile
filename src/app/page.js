@@ -1,8 +1,8 @@
-import Navbar from "@/components/Navbar/Navbar";
-import Showcase from "@/components/Showcase";
-import About from "@/components/About";
-import WiggleElement from "@/components/WiggleElement";
-import Cursor from "@/components/Cursor";
+import WiggleElement from "@/app/components/WiggleElement";
+import Cursor from "@/app/components/Cursor";
+import Link from "next/link";
+import Techstack from "./components/Techstack";
+import Cards from "./components/Cards";
 
 export const viewport = {
   width: 'device-width',
@@ -11,20 +11,60 @@ export const viewport = {
   userScalable: 'no',
 };
 
+const aboutme = [
+  "3️⃣rd year McGill student in Honours Cognitive Science",
+  "🧠 Neuroscience, Computer Science, and Linguistics",
+  "🔢 Data",
+  "🎨 Design",
+  "💻 Website",
+  "🍎 Software",
+  "🎮 Game",
+  "🌌 Anything about Universe"
+]
+
 export default function Home() {
   return (
-    <div className="cursor-none">
-      
-      <Cursor />
-      <Navbar />
-      <div id="home" className="wrapper">
-        <p className="text-center text-gray-500">Hello, this is</p>
-        <WiggleElement className="relative z-10">
-          <p id="bigname">Keming Wang</p>
-        </WiggleElement>
-        <Showcase />
-        <About id="about"/>
+    <div className="p-10 md:p-20 pt-10">
+      <WiggleElement>
+        <p className="text-[#727272] text-6xl mb-10 md:text-9xl">Home / </p>
+      </WiggleElement>
+
+      <div className="fixed bottom-0 right-0 z-50 text-xs p-2 bg-white text-black">
+      <div className="block sm:hidden">xs screen</div>
+      <div className="hidden sm:block md:hidden">sm screen</div>
+      <div className="hidden md:block lg:hidden">md screen</div>
+      <div className="hidden lg:block xl:hidden">lg screen</div>
+      <div className="hidden xl:block">xl screen</div>
       </div>
+
+      <section id="about" className="mb-20">
+        <p className="pb-5 text-lg"><span className="text-[#727272] pr-2">#</span>About me</p>
+        <div className="z-50 flex-wrap flex gap-2 space-y-2 justify-left">
+          {aboutme.map((text, index) => (
+              <WiggleElement key= {index}>
+                    <div
+                        className="bg-[#2A2929] text-sm p-2 rounded-md transitiotext-white h-auto"                      
+                    >
+                        <span>{text}</span>             
+                    </div>
+              </WiggleElement>
+            ))}
+        </div>
+       
+      </section>
+      
+
+      <section id="explore" className="mb-20">
+        <p className="pb-5 text-lg"><span className="text-[#727272] pr-2">#</span>Explore</p>
+        <Cards />
+      </section>
+
+      <section id="tech" className="mb-20">
+        <p className="pb-5 text-lg"><span className="text-[#727272] pr-2">#</span>My Tech Stack</p>
+        <Techstack />
+      
+      </section>
+
     </div>
   );
 }

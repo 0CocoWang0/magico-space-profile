@@ -1,6 +1,9 @@
-import "./globals.css";
-import Image from "next/image";
-
+import "@/app/globals.css";
+import { Analytics } from "@vercel/analytics/react"
+import Cursor from "@/app/components/Cursor";
+import Nav from "@/app/components/Nav";
+import DocsLayout from "./components/DocsLayout";
+import Contact from "./components/Contact";
 
 export const metadata = {
   title: "You're landing in Magico Space",
@@ -8,29 +11,38 @@ export const metadata = {
   charset: "UTF-8",
   author: "Keming Wang",
   keywords: "web development, portofolio, Keming Wang, McGill University",
-  viewport: "width=device-width, initial-scale=1.0",
   ogTitle: "Welcome to Keming Wang's World",
   ogType: "website",
   
 };
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: 'no',
+};
+
+
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="cursor-none">
-        
-        <nav></nav>
-        {children}
-        <footer id="projects">
-          <Image
-            src="/images/KM_icon-white.png"
-            alt="icon"
-            width={58}
-            height={34}></Image>
-          <p>© 2025 Keming Wang. All rights reserved.</p>
-          <p>这很好玩了</p>
-        </footer>
+      <body className="cursor-none h-full ">
+        <Cursor />
+        <div className="absolute pt-3 md:pt-1 items-center z-50 flex w-screen">         
+          <p className="text-center text-[10px] text-[#727272] w-full">presented by Keming Wang</p>          
+          <div className="-translate-x-10"><Contact/></div>
+        </div>
+        <div className="flex h-screen cursor-none scroll-smooth">
+          <DocsLayout>{children}</DocsLayout>
+          
+
+        </div>
+      
+          <Analytics />
+          
       </body>
+
     </html>
   );
 }

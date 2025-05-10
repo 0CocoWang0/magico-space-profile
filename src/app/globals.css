@@ -1,164 +1,40 @@
 @import "tailwindcss";
 
+
 :root {
   --background: #2A2929;
   --foreground: #ffffff;
 }
-
-@theme {
-  --animate-wiggle: wiggle 1s ease-in-out infinite;
-  @keyframes wiggle {
-    0%,
-    100% {
-      transform: rotate(-3deg);
-    }
-    50% {
-      transform: rotate(3deg);
-    }
-  }
-}
-
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #2A2929;
-    --foreground: #ededed;
-  }
-}
-@media (max-width: 428px) {
-  #logo {
-    visibility: hidden;
-  }
-  #contact-button {
-    margin-left: 247px;
-    right: 0;
-    margin-top: 10px; /* Add space below navbar */
-  }
-
-  #bigname {
-      font-size: 7rem;
-      font-weight: 700;
-      line-height: 1;
-      justify-content: center;
-      display: flex;
-      color: #fff;
-      position:relative;
-      text-shadow: 2px 2px 5px rgba(60, 60, 60, 0.5);
-      z-index: 3;
-  }
-
-  #showcase {
-    margin: 0px -70px 20px;
-
-  }
-}
-
-@media (hover:none){
-  *{
-    cursor:none !important;
-  }
-}
-
-@keyframes bounceOut {
-  0% {
-      transform: scale(0.9);
-      opacity:0;
-  }
-  50% {
-      transform: scale(1.2);
-      opacity: 1;
-  }
-  100% {
-      transform: scale(1);
-      opacity: 1;
-  }
-}
-@keyframes fadeOut {
-  0% {
-      opacity: 1;
-  }
-
-  100% {
-      opacity: 0;
-  }
-}
-.animate-bounceOut {
-  animation: bounceOut 0.5s ease-in-out
-}
-
-.fadeOut {
-  animation: fadeOut 3s 3s;
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: DIN Alternate;
-  justify-content: center;
-  align-items: center;
-  overflow-x: hidden;
-  width: 100%;
-}
-
-@media (min-width: 428px) {
-  #bigname {
-    font-size: 10rem;
-    font-weight: 700;
-    line-height: 1;
+html, body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: DIN Alternate;
     justify-content: center;
-    display: flex;
-    color: #fff;
-    position:relative;
-    text-shadow: 2px 2px 5px rgba(60, 60, 60, 0.5);
-    z-index: 3;
-
+    align-items: center;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    position:fixed;
   }
+html {
+  scroll-behavior: smooth;
+}
+button {
+  cursor: pointer;
 }
 
-
-#bigname :hover{
-  color: aqua;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-}
-
-
-#showcase {
-  position: relative;
-  margin-top: -20px;
-  z-index: 0;
-}
-
-footer {
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.lock-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
   width: 100%;
-  margin-top: 40px;
-  padding: 40px 0px 40px;
-  justify-content: center;
-  text-align: center;
-  font-size: 14px;
-  color: #666;
-  background: #000;
- }
+  height: 100vh;
+}
 
-footer p {
-  margin-top: 10px;
- }
-
-
-.wrapper {
-  padding: 40px 85px 40px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
+.scroll-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; /* nice webkit native scroll */
 }

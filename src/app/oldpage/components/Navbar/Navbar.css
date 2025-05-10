@@ -1,0 +1,113 @@
+.sticky-wrapper {
+    position: sticky;
+    
+    height: 74px;
+    width: 100%;
+    z-index: 20;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    backdrop-filter: blur(10px) ;
+    
+}
+
+#header {
+    padding: 10px 0;
+    display: flex;
+   
+    align-items: center;
+    height: 80px;
+    transition: all 0.5s;
+    border: none;
+    outline: none;
+    z-index: 997;
+}
+
+.sticky-wrapper .container {
+    width: 100%;
+    flex-wrap: wrap;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    outline: none;
+    display: flex;
+}
+
+
+.sticky-wrapper .nav-menu {
+    border: none;
+    outline: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    justify-content: space-evenly;
+    padding: 5px 20px 5px;
+    border-radius: 10px;
+    background: #000000;
+    
+}
+
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 200px;
+    background: rgb(0, 0, 0);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(-15px);
+    visibility: hidden;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  }
+  
+  /* When dropdown is active */
+  .dropdown.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    animation: bounceDown 0.4s ease-out;
+  }
+  
+  /* Fade out effect */
+  .dropdown.fade-out {
+    animation: bounceUp 0.4 ease-out;
+    
+  }
+
+  .dropdown-link{
+    text-decoration: underline;
+    text-decoration-color: white;
+  }
+  
+  @keyframes bounceDown {
+    0% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(3px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bounceUp {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(3px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
