@@ -27,6 +27,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <link rel="icon" href="https://magico-space.vercel.app/favicon.ico?v=2" />
       <body className="cursor-none h-full ">
         <Cursor />
         <div className="absolute pt-3 md:pt-1 items-center z-50 flex w-screen">         
