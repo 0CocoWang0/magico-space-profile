@@ -12,8 +12,9 @@ export const metadata = {
   keywords: "web development, data science, analyst, neuroscience, analytics, artist, design, portofolio, Keming Wang, McGill University",
   ogTitle: "Welcome to Keming Wang's World",
   ogType: "website",
-  icons: [{rel:'icon', 
-  url:'/images/favicon-v2.ico'}]
+  icons: {rel:'icon', 
+    icon:'/images/favicon.png?v=2',
+}
   
 }
 export const viewport = {
