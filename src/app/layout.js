@@ -3,7 +3,6 @@ import { Analytics } from "@vercel/analytics/react"
 import Cursor from "@/app/components/Cursor";
 import DocsLayout from "./components/DocsLayout";
 import Contact from "./components/Contact";
-import Head from "next/head";
 
 export const metadata = {
   title: "You're landing in Magico Space",
@@ -29,7 +28,6 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      
       <body className="cursor-none h-full ">
         <Cursor />
         <div className="absolute pt-3 md:pt-1 items-center z-50 flex w-screen">         
