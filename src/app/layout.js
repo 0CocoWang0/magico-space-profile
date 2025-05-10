@@ -1,20 +1,22 @@
 import "@/app/globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import Cursor from "@/app/components/Cursor";
-import Nav from "@/app/components/Nav";
 import DocsLayout from "./components/DocsLayout";
 import Contact from "./components/Contact";
+import Head from "next/head";
 
 export const metadata = {
   title: "You're landing in Magico Space",
   description: "About what Keming Wang did in various areas.",
   charset: "UTF-8",
   author: "Keming Wang",
-  keywords: "web development, portofolio, Keming Wang, McGill University",
+  keywords: "web development, data science, analyst, neuroscience, analytics, artist, design, portofolio, Keming Wang, McGill University",
   ogTitle: "Welcome to Keming Wang's World",
   ogType: "website",
+  icons: [{rel:'icon', 
+  url:'/images/favicon-v2.ico'}]
   
-};
+}
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -27,7 +29,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link rel="icon" href="https://magico-space.vercel.app/favicon.ico?v=2" />
+      
       <body className="cursor-none h-full ">
         <Cursor />
         <div className="absolute pt-3 md:pt-1 items-center z-50 flex w-screen">         
