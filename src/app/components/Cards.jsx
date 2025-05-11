@@ -5,7 +5,7 @@ const projects = [
     {
         title: "Website for NORD consulting club at McGill",
         image: "/images/webproj1.png",
-        description: "Here’s a short summary of the event...",
+        description: "Leading the revamp of NORD Consulting’s website to enhance UI/UX, modernize the design, and improve SEO.",
         tag: ["💻 Website", "Webflow", "Front-end Dev"],
         status: "View Project",
         clickable: true,
@@ -14,7 +14,7 @@ const projects = [
     {
         title: "ARPPLE - a novel solution for artists",
         image: "/images/arpple.jpg",
-        description: "Here’s a short summary of the event...",
+        description: "Currently developing core features, including user authentication, artwork trading, and subscription-based monetization.",
         tag: ["💻 Website", "🍎 Software", "Full-stack Dev", "React", "Next.js"],
         status: "In Progress",
         clickable: false,
@@ -23,16 +23,16 @@ const projects = [
     {
         title: "Being an artist in the digital age",
         image: "/images/anime.jpeg",
-        description: "Here’s a short summary of the event...",
+        description: "Without boundary, I create stories and characters that transcend the limits of reality.",
         tag: ["🎨 Design", "Procreate", "Multi-media", "Animation"],
         status: "View Project",
         clickable: true,
         href:null
     },
     {
-        title: "I will make some games!",
+        title: "More to come...",
         image: "/images/show3.png",
-        description: "Here’s a short summary of the event...",
+        description: "New ways to explore my parallel universe.",
         tag: ["🎮 Game", "Unity", "C#", "Game Dev"],
         status: "In progress",
         clickable: false,

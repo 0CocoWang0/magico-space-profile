@@ -26,16 +26,10 @@ export default function Home() {
   return (
     <div className="p-10 md:p-20 pt-10">
       <WiggleElement>
-        <p className="text-[#727272] text-6xl mb-10 md:text-9xl">Home / </p>
+        <p className="opacity-80 text-white text-6xl mb-10 md:text-9xl">Home / </p>
       </WiggleElement>
 
-      <div className="fixed bottom-0 right-0 z-50 text-xs p-2 bg-white text-black">
-      <div className="block sm:hidden">xs screen</div>
-      <div className="hidden sm:block md:hidden">sm screen</div>
-      <div className="hidden md:block lg:hidden">md screen</div>
-      <div className="hidden lg:block xl:hidden">lg screen</div>
-      <div className="hidden xl:block">xl screen</div>
-      </div>
+     
 
       <section id="about" className="mb-20">
         <p className="pb-5 text-lg"><span className="text-[#727272] pr-2">#</span>About me</p>
