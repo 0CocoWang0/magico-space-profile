@@ -11,7 +11,9 @@ const techStack = [
   { name: "SQL", usage: 50, category: "Database", proficiency: 60, src: "/images/techicon/postgresql.svg" },
   { name: "TailwindCSS", usage: 80, category: "Frontend", proficiency: 80, src: "/images/techicon/tailwind.png" },
   { name: "Procreate", usage: 90, category: "Frontend", proficiency: 100, src: "/images/techicon/procreate.png" },
-  { name: "Sketch", usage: 95, category: "Frontend", proficiency: 100, src: "/images/techicon/sketch.png" }
+  { name: "Sketch", usage: 95, category: "Frontend", proficiency: 100, src: "/images/techicon/sketch.png" },
+  { name: "Git", usage: 85, category: "Frontend", proficiency: 100, src: "/images/techicon/sketch.png" }
+
 
 ];
 
