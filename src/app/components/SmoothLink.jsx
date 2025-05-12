@@ -2,7 +2,7 @@
 import React from 'react'
 import { usePathname } from 'next/navigation'
 
-const SmoothLink = ({href, children, className}) => {
+const SmoothLink = ({href, children, className, onClick}) => {
     const pathname = usePathname()
         const handleClick = (e) => {
             const [targetPath, hash] = href.split('#')
@@ -16,6 +16,7 @@ const SmoothLink = ({href, children, className}) => {
                 history.pushState(null, '', `#${hash}`)
             }
         }
+        if (onClick) onClick(e)
     }
     return (
         <a href={href} onClick={handleClick} className={className}>{children}</a>

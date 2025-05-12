@@ -5,13 +5,13 @@ import CustomContent from "./CustomContent";
 
 const techStack = [
   { name: "React", usage: 90, category: "Frontend", proficiency: 85, src: "/images/techicon/react.png" },
-  { name: "Next.js", usage: 70, category: "Backend", proficiency: 80, src: "/images/techicon/nodejs.png" },
-  { name: "Python", usage: 90, category: "Backend", proficiency: 100, src: "/images/techicon/python.png" },
+  { name: "Next.js", usage: 80, category: "Backend", proficiency: 80, src: "/images/techicon/nodejs.png" },
+  { name: "Python", usage: 95, category: "Backend", proficiency: 100, src: "/images/techicon/python.png" },
   { name: "R", usage: 70, category: "Data Science", proficiency: 80, src: "/images/techicon/r.png" },
   { name: "SQL", usage: 50, category: "Database", proficiency: 60, src: "/images/techicon/postgresql.svg" },
   { name: "TailwindCSS", usage: 80, category: "Frontend", proficiency: 80, src: "/images/techicon/tailwind.png" },
-  { name: "Procreate", usage: 80, category: "Frontend", proficiency: 100, src: "/images/techicon/procreate.png" },
-  { name: "Sketch", usage: 90, category: "Frontend", proficiency: 100, src: "/images/techicon/sketch.png" }
+  { name: "Procreate", usage: 90, category: "Frontend", proficiency: 100, src: "/images/techicon/procreate.png" },
+  { name: "Sketch", usage: 95, category: "Frontend", proficiency: 100, src: "/images/techicon/sketch.png" }
 
 ];
 

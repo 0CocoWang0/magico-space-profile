@@ -45,7 +45,7 @@ export default function Home() {
             ))}
         </div>
         
-          <a href="/docs/experience" className="mt-10 group text-sm text-[#727272] inline-flex items-center justify-self-center gap-2 pointer-events-auto font-semibold rounded-lg px-2 py-2 hover:text-white cursor-pointer hover:underline decoration-[#91EAE4] decoration-wavy">
+          <a href="/docs/experience" className="mt-10 group text-sm text-white inline-flex items-center justify-self-center gap-2 pointer-events-auto font-semibold rounded-lg px-2 py-2 hover:text-white cursor-pointer hover:underline decoration-[#91EAE4] decoration-wavy">
               <span className="relative mr-1 flex size-2">
                               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
                               <span className="relative inline-flex size-2 rounded-full bg-sky-500"></span>

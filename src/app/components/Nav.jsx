@@ -2,24 +2,9 @@
 import React, { useEffect, useRef, useState} from 'react'
 import SmoothLink from './SmoothLink';
 
-const useIsMobile = () => {
-    const [isMobile, setIsMobile] = React.useState(null); // null initially
-  
-    React.useEffect(() => {
-      const checkMobile = () => setIsMobile(window.innerWidth < 768);
-  
-      checkMobile(); // run once on mount
-      window.addEventListener("resize", checkMobile);
-  
-      return () => window.removeEventListener("resize", checkMobile);
-    }, []);
-  
-    return isMobile;
-  };
 
-const Nav = () => {
-    const isMobile = useIsMobile();
-
+const Nav = ({ setIsOpen, isMobile }) => {
+  
     const [openSections, setOpenSections] = React.useState({
         Home: false,
         Experience: false,
@@ -96,7 +81,11 @@ const Nav = () => {
                             }}>
                                 <div className='flex flex-col text-[#727272] py-3 text-sm space-y-1'>
                                     {subs.map((sub, index) => (
-                                        <SmoothLink key={index} href={href[index]} className='hover:text-white'>
+                                        <SmoothLink key={index} href={href[index]} className='hover:text-white' onClick={() => {
+                                            if (isMobile) {
+                                              setIsOpen(false); // Collapse the sidebar
+                                            }
+                                          }}>
                                             {sub}
                                         </SmoothLink>              
                                 ))}

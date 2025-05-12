@@ -43,7 +43,7 @@ export default function DocsLayout({children}) {
             bg-[#2A2929] overflow-auto`}>
               <div className="m-5 mt-15 md:mt-20 p-5">
                 <HeadProfile />
-                <Nav />
+                <Nav setIsOpen={setIsOpen} isMobile={isMobile}/>
 
               </div>
           </aside>
