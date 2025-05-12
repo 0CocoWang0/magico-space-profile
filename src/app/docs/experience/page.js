@@ -5,7 +5,7 @@ import {motion, AnimatePresence} from 'framer-motion'
 import Exp from '@/app/components/Exp'
 import Cards from '@/app/components/Cards'
 
-const page = () => {
+const Page = () => {
   const [active, setActive] = React.useState(0);
 
   const List = [
@@ -152,4 +152,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
