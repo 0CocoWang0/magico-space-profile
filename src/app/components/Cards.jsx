@@ -22,7 +22,7 @@ const projects = [
     },
     {
         title: "Being an artist in the digital age",
-        image: "/images/anime.jpeg",
+        image: "/images/manga.png",
         description: "Without boundary, I create stories and characters that transcend the limits of reality.",
         tag: ["🎨 Design", "Procreate", "Multi-media", "Animation"],
         status: "In progress",
@@ -31,7 +31,7 @@ const projects = [
     },
     {
         title: "More to come...",
-        image: "/images/show3.png",
+        image: "/images/anime.jpeg",
         description: "New ways to explore my parallel universe.",
         tag: ["🎮 Game", "Unity", "C#", "Game Dev"],
         status: "In progress",

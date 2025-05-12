@@ -4,6 +4,8 @@ import Cursor from "@/app/components/Cursor";
 import DocsLayout from "./components/DocsLayout";
 import Contact from "./components/Contact";
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 export const metadata = {
   title: "You're landing in Magico Space",
   description: "About what Keming Wang did in various areas.",
@@ -33,7 +35,7 @@ export default function RootLayout({ children }) {
       <body className="cursor-none h-full ">
         <Cursor />
         <div className="absolute p-3  items-center z-50 flex w-screen">         
-          <p className="text-center text-[10px] text-[#727272] w-full">presented by Keming Wang</p>          
+          <p className="text-center text-[10px] text-[#727272] w-full">presented by Keming Wang with 😎</p>          
           <div className="-translate-x-10"><Contact/></div>
         </div>
         <div className=" cursor-none scroll-smooth">

@@ -108,7 +108,7 @@ const Page = () => {
 
 
   return (
-    <div className="p-10 md:p-10 md:px-[15%] pt-10">
+    <div className="md:p-10 md:px-[15%] pt-10">
       <WiggleElement>
         <p className="opacity-80 text-white text-6xl mb-10 md:mb-20 md:text-7xl">Experience / </p>
       </WiggleElement>

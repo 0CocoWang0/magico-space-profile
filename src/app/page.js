@@ -23,7 +23,7 @@ const aboutme = [
 
 export default function Home() {
   return (
-    <div className="p-10 md:px-[15%] pt-10">
+    <div className="md:px-[15%] pt-10">
       <WiggleElement>
         <p className="opacity-80 text-white text-6xl mb-10 md:text-7xl">Home / </p>
       </WiggleElement>
@@ -44,6 +44,16 @@ export default function Home() {
               </WiggleElement>
             ))}
         </div>
+        
+          <a href="/docs/experience" className="mt-10 group text-sm text-[#727272] inline-flex items-center justify-self-center gap-2 pointer-events-auto font-semibold rounded-lg px-2 py-2 hover:text-white cursor-pointer hover:underline decoration-[#91EAE4] decoration-wavy">
+              <span className="relative mr-1 flex size-2">
+                              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                              <span className="relative inline-flex size-2 rounded-full bg-sky-500"></span>
+              </span>
+              View my experiences
+              <img src="/images/arrowdown.jpg" className="h-1 -rotate-90 transform transition-transform duration-200 group-hover:translate-x-[3px]"/>
+          </a>                        
+        
        
       </section>
       

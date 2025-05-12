@@ -1,16 +1,17 @@
 import {useState, useEffect} from 'react'
 import React from 'react'
 
-const emojis = ['✨', '🎨', '🥺', '🌍', '😎', '👽'];
+const emojis = ['✨', '🎨', '🎮', '🌍', '😎', '👻'];
 const ReactionButton = () => {
     const [reactions, setReactions] = useState({
         '✨': 0, 
         '🎨': 0, 
-        '🥺': 0, 
+        '🎮': 0, 
         '🌏': 0, 
         '😎': 0, 
-        '👽': 0,
+        '👻': 0,
     });
+    
 
     const [selected, setSelected] = useState(null);
 

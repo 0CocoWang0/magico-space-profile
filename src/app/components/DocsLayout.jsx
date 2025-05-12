@@ -54,7 +54,7 @@ export default function DocsLayout({children}) {
               ${!isMobile && isOpen ? "w-full" : "md:-ml-175 w-full"}
             `}
           >
-            <div className="md:p-5 rounded-2xl bg-[#191919] overflow-auto h-full w-full">
+            <div className="p-5 md:p-10 rounded-2xl bg-[#191919] overflow-auto h-full w-full">
               {children}
             </div>
           </main>

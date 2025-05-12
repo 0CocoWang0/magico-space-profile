@@ -1,3 +1,6 @@
+import { connectToDatabase } from "@/db";
+import Reaction from "@/app/models/Reaction"
+
 let reactions = {
     '✨': 0, 
     '🎨': 0, 
@@ -8,7 +11,13 @@ let reactions = {
 }
 //reading data whenever frontend requests to api/reactions
 export async function GET() {
-    return new Response(JSON.stringify(reactions), {
+    await connectToDatabase();
+    const allReactions = await Reaction.find({});
+    const formatted = {};
+    allReactions.forEach(r => {
+        formatted[r.emoji] = r.count;
+    });
+    return new Response(JSON.stringify(formatted), {
         status: 200,
         headers: {
             'Content-Type': 'application/json',
@@ -17,12 +26,26 @@ export async function GET() {
 }
 //writing data
 export async function POST(request) {
+    await connectToDatabase();
+    
     //extract emoji in POST request
     const { emoji } = await request.json();
-    if (reactions[emoji] !== undefined) {
-        reactions[emoji] += 1;
+    if (!emoji) {
+        return new Response(JSON.stringify({ error: "No emoji provided" }), { status: 400 });
     }
-    return new Response(JSON.stringify(reactions), {
+    await Reaction.findOneAndUpdate(
+        { emoji },
+        { $inc: { count: 1 } },
+        { upsert: true, new: true }
+    );
+    const allReactions = await Reaction.find({});
+    const formatted = {};
+    allReactions.forEach(r => {
+        formatted[r.emoji] = r.count;
+    });
+
+
+    return new Response(JSON.stringify(formatted), {
         status: 200,
         headers: {
             'Content-Type': 'application/json',
@@ -31,12 +54,22 @@ export async function POST(request) {
 }
 
 export async function DELETE(request) {
+    await connectToDatabase();
     const { emoji } = await request.json();
-    if (emoji && emoji in reactions && reactions[emoji] > 0) {
-        // Decrease the count of the emoji reaction
-        reactions[emoji] -= 1;
+
+    const reaction = await Reaction.findOne({ emoji });
+    if (reaction && reaction.count > 0) {
+        reaction.count -= 1;
+        await reaction.save();
     }
-    return new Response(JSON.stringify(reactions), {
+
+    const allReactions = await Reaction.find({});
+    const formatted = {};
+    allReactions.forEach(r => {
+        formatted[r.emoji] = r.count;
+    });
+
+    return new Response(JSON.stringify(formatted), {
         status: 200,
         headers: {
             'Content-Type': 'application/json',

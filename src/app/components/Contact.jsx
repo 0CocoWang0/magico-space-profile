@@ -19,7 +19,7 @@ const Contact = () => {
     }
   ]
   return (
-    <div className="flex gap-8 align-bottom">
+    <div className="flex gap-6 align-bottom">
       {
         contactLinks.map((link, index) => (
           <a key={index} href={link.href} target="_blank" alt={link.alt}>
