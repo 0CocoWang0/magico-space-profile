@@ -25,11 +25,11 @@ const HeadProfile = () => {
 
             <p className='text-sm pt-5 pb-5 text-[#727272]'>" I could be a neuroscientist spotting commercial opportunities, a linguist building web
             platforms, or a designer conducting data analysis." </p>
-            <div className='pb-10'>
+            <div className='md:pb-10 pb-5'>
                 <ReactionButton/>
             </div>
 
-            <div className='pb-10 pl-2'>
+            <div className='md:pb-10 pb-5 pl-2'>
                 <Contact />
             </div>
      </div>       

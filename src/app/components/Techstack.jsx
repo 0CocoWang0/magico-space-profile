@@ -1,53 +1,54 @@
-"use client"
-import React from 'react'
-import { Treemap, Tooltip, ResponsiveContainer } from 'recharts';
-import CustomContent from './CustomContent';
+"use client";
+import { Treemap, Tooltip as ReTooltip, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Legend } from "recharts";
+import Tabs from "@/app/components/Tabs";
+import CustomContent from "./CustomContent";
 
-const Techstack = () => {
-  const techStack = [
-    { name: "Python", value: 35 },
-    { name: "R", value: 25 },
-    { name: "React", value: 20 },
-    { name: "SQL", value: 15 },
-    { name: "Tailwind", value: 10 },
-    { name: "Next.js", value: 10 },
-  ];
+const techStack = [
+  { name: "React", usage: 90, category: "Frontend", proficiency: 85, src: "/images/techicon/react.png" },
+  { name: "Next.js", usage: 70, category: "Backend", proficiency: 80, src: "/images/techicon/nodejs.png" },
+  { name: "Python", usage: 90, category: "Backend", proficiency: 100, src: "/images/techicon/python.png" },
+  { name: "R", usage: 70, category: "Data Science", proficiency: 80, src: "/images/techicon/r.png" },
+  { name: "SQL", usage: 50, category: "Database", proficiency: 60, src: "/images/techicon/postgresql.svg" },
+  { name: "TailwindCSS", usage: 80, category: "Frontend", proficiency: 80, src: "/images/techicon/tailwind.png" },
+  { name: "Procreate", usage: 80, category: "Frontend", proficiency: 100, src: "/images/techicon/procreate.png" },
+  { name: "Sketch", usage: 90, category: "Frontend", proficiency: 100, src: "/images/techicon/sketch.png" }
 
-  const colors = [
-    "#4281A4",
-    "#fe938c",
-    "#E6B89C",
-    "#EAD2AC",
-    "#9CAFB7",
-    "#9966FF",
-  
-  ];
+];
+
+
+export default function TechStackCharts() {
 
   return (
-    <div className='w-full h-[400px] bg-black'>
-       <ResponsiveContainer>
-        <Treemap
-          data={techStack}
-          dataKey="value"
-          name-key="name"
-          content={(props) => <CustomContent {...props} colors={colors}/>}
-        >
-          <Tooltip 
-            content={({ active, payload }) => {
-              if (active && payload && payload.length) {
-                return (
-                  <div className="bg-white text-black text-[10px] p-2 rounded">
-                    <p>{`${payload[0].payload.name} : ${payload[0].value + "%"}`}</p>
-                  </div>
-                );
-              }
-              return null;
-            }}
-          />
-        </Treemap>
-      </ResponsiveContainer>
-    </div>
-  )
-}
+    <div className="w-full p-4">
+      <Tabs tabs={["Treemap", "Radar Chart"]}>
+        {/* Treemap */}
+        <div className="h-[400px]">
+          <ResponsiveContainer>
+            <Treemap
+              data={techStack}
+              dataKey="usage"
+              nameKey="name"
+              content = {<CustomContent />}
+            >
+              <ReTooltip />
+            </Treemap>
+          </ResponsiveContainer>
+        </div>
+        {/* Radar Chart */}
+        <div className="h-[400px]">
+          <ResponsiveContainer>
+            <RadarChart cx="50%" cy="50%" outerRadius="80%" data={techStack}>
+              <PolarGrid />
+              <PolarAngleAxis dataKey="name" />
+              <PolarRadiusAxis angle={30} domain={[0, 100]} />
+              <Radar name="Usage" dataKey="usage" stroke="#91EAE4" fill="#91EAE4" fillOpacity={0.6} />
+              <ReTooltip />
+              <Legend />
+            </RadarChart>
+          </ResponsiveContainer>
+        </div>
 
-export default Techstack
+      </Tabs>
+    </div>
+  );
+}

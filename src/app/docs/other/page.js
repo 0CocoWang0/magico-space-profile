@@ -3,8 +3,8 @@ import '@/app/layout.js'
 
 const page = () => {
   return (
-    <div className='text-white'>
-      something
+    <div className='flex text-white w-full'>
+      something asodifjoifjaoijfoijsaofiajfoisjdofija
     </div>
   )
 }

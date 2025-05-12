@@ -19,6 +19,7 @@ export const metadata = {
 }
 export const viewport = {
   width: 'device-width',
+  height: 'device-height',
   initialScale: 1,
   maximumScale: 1,
   userScalable: 'no',
@@ -31,14 +32,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="cursor-none h-full ">
         <Cursor />
-        <div className="absolute pt-3 md:pt-1 items-center z-50 flex w-screen">         
+        <div className="absolute p-3  items-center z-50 flex w-screen">         
           <p className="text-center text-[10px] text-[#727272] w-full">presented by Keming Wang</p>          
           <div className="-translate-x-10"><Contact/></div>
         </div>
-        <div className="flex h-screen cursor-none scroll-smooth">
-          <DocsLayout>{children}</DocsLayout>
-          
-
+        <div className=" cursor-none scroll-smooth">
+          <DocsLayout>{children}</DocsLayout>          
         </div>
       
           <Analytics />

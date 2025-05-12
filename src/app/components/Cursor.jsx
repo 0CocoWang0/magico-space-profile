@@ -71,7 +71,7 @@ const Cursor = () => {
     return (
         <>
             <motion.div
-                className="fixed top-0 left-0 z-900 w-4 h-4 bg-purple-300 rounded-full pointer-events-none mix-blend-difference"
+                className="fixed top -left-1 z-900 w-4 h-4 bg-purple-300 rounded-full pointer-events-none mix-blend-difference"
                 style={{
                     translateX: springX,
                     translateY: springY,
@@ -99,7 +99,7 @@ const Cursor = () => {
             */}
             <div
                 ref={blobRef}
-                className="fixed -top-20 -left-20 w-50 h-50 opacity-10 z-900 bg-purple-300 pointer-events-none rounded-full blur-3xl"
+                className="fixed -top-20 -left-20 w-60 h-60 opacity-15 z-900 bg-purple-300 pointer-events-none rounded-full blur-3xl"
                 style={{
                     translateX: springX,
                     translateY: springY,

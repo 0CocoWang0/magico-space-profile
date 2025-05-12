@@ -19,11 +19,11 @@ const Contact = () => {
     }
   ]
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-8 align-bottom">
       {
         contactLinks.map((link, index) => (
           <a key={index} href={link.href} target="_blank" alt={link.alt}>
-            <img src={link.imgSrc} className='h-5 w-5 md:h-3 md:w-3 object-contain' />
+            <img src={link.imgSrc} className='h-5 w-5 md:h-4 md:w-4 object-contain' />
           </a>
         ))
       }

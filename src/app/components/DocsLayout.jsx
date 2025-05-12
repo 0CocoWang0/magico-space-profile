@@ -30,17 +30,18 @@ export default function DocsLayout({children}) {
   return (
         <div className="flex h-screen">
       
-          <div className="fixed left-4 top-3 md:top-1 z-101">
-            <button onClick={() => setIsOpen((prev)=>!prev)} className="h-4 w-4 text-white rounded hover:bg-[#666] touch">
+          <div className="fixed left-8 top-2 md:top-1 z-101">
+            <button onClick={() => setIsOpen((prev)=>!prev)} className="h-7 w-7 p-1 text-white rounded bg-[#2A2929] hover:bg-[#000]">
               <img src="/images/toggle.jpg" alt="Toggle Sidebar" className="h-full w-full object-contain" />
             </button>
           </div>
           
           <aside 
-            className={` z-100 h-full duration-300 ease-in-out transition-transform w-100
-              ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-            bg-[#2A2929] overflow-auto -webkit-overflow-scrolling-touch`}>
-              <div className="m-5 mt-20 p-5">
+            className={`scrollbar-hide z-100 h-full duration-300 ease-in-out transition-transform
+              fixed md:static md:w-175 w-full
+              ${isOpen ? 'translate-x-0' : 'w-0 -translate-x-full'}
+            bg-[#2A2929] overflow-auto`}>
+              <div className="m-5 mt-15 md:mt-20 p-5">
                 <HeadProfile />
                 <Nav />
 
@@ -49,11 +50,11 @@ export default function DocsLayout({children}) {
 
           <main 
             className={`
-              pt-10 md:pt-6 p-3 bg-[#2A2929] transition-all duration-300 h-full
-              ${!isMobile && isOpen ? "md:w-[calc(100vw-400px)]" : "-ml-98 w-screen -translate-x-2 md:-ml-100 md:w-full"}
+              pt-10 md:pt-8 p-3 bg-[#2A2929] transition-all duration-500
+              ${!isMobile && isOpen ? "w-full" : "md:-ml-175 w-full"}
             `}
           >
-            <div className="md:p-5 rounded-2xl bg-[#191919] overflow-auto h-full">
+            <div className="md:p-5 rounded-2xl bg-[#191919] overflow-auto h-full w-full">
               {children}
             </div>
           </main>

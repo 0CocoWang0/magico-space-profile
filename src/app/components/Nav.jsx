@@ -2,13 +2,37 @@
 import React, { useEffect, useRef, useState} from 'react'
 import SmoothLink from './SmoothLink';
 
+const useIsMobile = () => {
+    const [isMobile, setIsMobile] = React.useState(null); // null initially
+  
+    React.useEffect(() => {
+      const checkMobile = () => setIsMobile(window.innerWidth < 768);
+  
+      checkMobile(); // run once on mount
+      window.addEventListener("resize", checkMobile);
+  
+      return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+  
+    return isMobile;
+  };
+
 const Nav = () => {
+    const isMobile = useIsMobile();
 
     const [openSections, setOpenSections] = React.useState({
-        Home: true,
-        Experience: true,
-        Random: true,
+        Home: false,
+        Experience: false,
+        Random: false,
     });
+    React.useEffect(() => {
+        if (isMobile === null) return; // avoid running on SSR
+        setOpenSections({
+          Home: !isMobile,
+          Experience: !isMobile,
+          Random: !isMobile,
+        });
+      }, [isMobile]);
 
     const toggleSection = (section) => {
         
@@ -21,22 +45,21 @@ const Nav = () => {
     const navInfo = [
         {
             section: "Home",
-            subs: ["Abut me", "Explore", "My Tech Stack"],            
+            subs: ["# Abut me", "# Explore", "# My Tech Stack"],            
             href: ["/#about", "/#explore", "/#tech"]
         },
 
         {
             section: "Experience",
-            subs: ["Keming as a Data Scientist", "Keming as a Developer", "Keming as a Designer"],
-            href:["/", "/", "/"]
-            //href: ["/docs/experience#data", "/docs/experience#dev", "/docs/experience#design"]
+            subs: ["# Keming as a Developer", "# Keming as a Data Scientist", "# Keming as an Artist"],
+            href: ["/docs/experience#dev", "/docs/experience#data", "/docs/experience#art"]
         },
 
         {
             section: "Random",
-            subs: ["Music", "Games", "Sports"],
-            href:["/", "/", "/"]
-            //href: ["/docs/other#music", "/docs/other#games", "/docs/other#sports"]
+            subs: ["# Music", "# Games", "# Sports"],
+            //href: ["/", "/", "/"],
+            href: ["/docs/other#music", "/docs/other#games", "/docs/other#sports"]
         }
     ]
 
@@ -60,7 +83,7 @@ const Nav = () => {
                         }
                     }, [openSections[section]]);
                     return(
-                        <div key={section} className='flex flex-col pb-5'>
+                        <div key={section} className='flex flex-col pb-3 md:pb-5'>
                             <div className='w-full text-left flex gap-2 items-center cursor-pointer' onClick={() => toggleSection(section)}>
                                 <h1 className='text-[#727272] text-sm'>{section}</h1>
                                 <span className=''>{openSections[section] ? <img src='/images/arrowdown.jpg' className='h-1 rotate-0 transition-all ease-in-out duration-200'/> : <img src='/images/arrowdown.jpg' className='h-1 -rotate-90 transition-all ease-in-out duration-200'/>}</span>
