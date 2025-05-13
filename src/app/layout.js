@@ -18,8 +18,8 @@ export const metadata = {
   creator: "Keming Wang",
   charset: "UTF-8",
   openGraph:{
-    title:  "Welcome to Keming Wang's World",
-    description: "A creative portfolio spanning code, cognition, and design by Keming Wang",
+    title:  "You're landing in Magico Space",
+    description: "Explore what Keming Wang has done across web development, neuroscience, analytics, and the arts. She plays and learns like universe, never overfitting.",
     type: "website",
     locale: "en_US",
     url:"https://magico-space.vercel.app/#about",
@@ -35,7 +35,7 @@ export const metadata = {
   twitter:{
     card: "summary_large_image",
     title: "You're landing in Magico Space",
-    description: "A creative portfolio spanning code, cognition, and design by Keming Wang",
+    description: "Explore what Keming Wang has done across web development, neuroscience, analytics, and the arts. She plays and learns like universe, never overfitting.",
   },
   icons: {rel:'icon', 
     icon:'/images/favicon.png?v=2',

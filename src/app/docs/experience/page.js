@@ -13,15 +13,15 @@ const Page = () => {
           time: "2025.01 - Present",
           title: "Full-Stack Developer & Founder",
           company: "Arpple · Montreal, QC, Canada · On-site",
-          description: "Created and customized a social platform for artists to identify usability and monetization gaps",
+          description: "Created and customized a social platform for artists to identify usability and monetization gaps. Currently implementing 5+ core features such as user authentication, artwork trading, and subscription-based monetization",
           skills: ["🍎 Software", "💻 Website", "Full-stack development", "React", "UI/UX design"],
           link:""
           },
         {
         time: "2025.01 - Present",
-        title: "Assistant Researcher in Visual Neuroscience & Data Analysis",
+        title: "Undergraduate Researcher – Computational Neuroscience & Data Analytics",
         company: "McGill University Health Centre · Montreal, QC, Canada · On-site",
-        description: "Conducted Representational Similarity Analysis (RSA) and Temporal Similarity Analysis (TSA) on surface-based fMRI data to investigate neural representations of natural scenes.",
+        description: "Conducting exploratory data analysis of the Natural Scene Dataset (NSD) (73,000+ image conditions) via AWS to investigate visual representation across 7 brain ROIs. Performing Representational Similarity Analysis (RSA) and Topological Similarity Analysis (TSA) on high-dimensional fMRI data using Python, R, SQL, and Azure Data Studio",
         skills: ["📊 Data", "Data Analysis", "R", "Python", "SQL", "Neuroscience", "Image Processing"],
         link:""
         },
@@ -29,7 +29,7 @@ const Page = () => {
           time: "2025.01 - Present",
           title: "Website Development Director",
           company: "NORD Consulting · Montreal, QC, Canada · Hybrid",
-          description: "Leading front-end web development to revamp NORD Consulting’s website through UI/UX principles to improve SEO.",
+          description: "Leading front-end web development to revamp NORD Consulting’s website through UI/UX principles. Customized site design in Webflow and transitioned to Next.js and TailwindCSS for scalability and better SEO",
           skills: ["💻 Website", "Front-end development", "Next.js", "Webflow", "CMS", "UI/UX design"],
           link:""
         },
@@ -37,7 +37,7 @@ const Page = () => {
           time: "2024.06 - 2024.8",
           title: "SQL Data Analyst Intern",
           company: "Digital Sea Ltd. · Vancouver, BC, Canada · On-site",
-          description: "Conducted SQL-based analysis on a large-scale Chinese railroad dataset, generating structured tables to support diverse data analytics needs.",
+          description: "Extracted and transformed data from a large-scale Chinese railroad network dataset using SQL queries. Generated data tables and dashboards to evaluate station-level satisfaction scores and incident rates over time",
           skills: ["📊 Data", "SQL", "Python", "Azure Data Studio"],
           link:""
         },
@@ -45,7 +45,7 @@ const Page = () => {
           time: "2023.09 - 2024.1",
           title: "Design Coordinator",
           company: "McHacks · Montreal, QC, Canada · Hybrid",
-          description: "Created mock-ups, website prototypes, and event branding using Figma to prioritize usability and UI/UX",
+          description: "Created mock-up layouts, website prototypes, and 10+ event branding using Figma impacting 500+ participants. Designed micro-animations and visuals to enhance user engagement",
           skills: ["💻 Website", "🎨 Design", "Front-end development", "Figma", "UI/UX design", "Website prototyping", "Graphic Design"],
           link:""
         },
@@ -53,7 +53,7 @@ const Page = () => {
           time: "2023.03 - 2023.04",
           title: "2023 Winter Micro-Exp Program Intern",
           company: "McGill University · Montreal, QC, Canada · On-site",
-          description: "Curated a comprehensive report on commercial opponents and transformed old platform into a new one using WordPress.",
+          description: "Researched and analyzed 5+ competitor websites to inform UI improvements and marketing strategy. Redesigned outdated web platform using SquareSpace interactive prototypes to optimize UI/UX",
           skills: ["💻 Website", "🎨 Design", "UI/UX design", "Website prototyping", "Graphic Design"],
           link:""
         },
@@ -68,17 +68,18 @@ const Page = () => {
         },
         {
           time: "2022.08 - 2022.12",
-          title: "Assistant Programmer in Machine Learning",
-          company: "Leader Ltd. · Nanchang, Jiangxi, China · On-site",
-          description: "Preprocessed and augmented medical label image datasets for machine learning training.",
+          title: "Machine Learning Research Assistant – Medical Imaging for AI Bacterial Colony Counter",
+          company: "Punmicro Scienefic · Shanghai, China · Remote",
+          description: "Developed preprocessing and data augmentation pipelines for large-scale medical image datasets used in AI bacterial colony counting. Utilized TensorFlow, OpenCV, and Python to improve model training data diversity, increasing accuracy from baseline to over 90% on held-out data",
           skills: ["📊 Data", "Python", "OpenCV", "Image Processing", "Machine Learning"],
           link:""
   
         },
         
             {
-            time: "2023.09 - Present",
+            time: "2019.09 - Present",
             title: "Freelance Digital Artist & Designer",
+            company: "Self-Employed · Remote",
             description: "Uploaded 100+ digital artworks on Lofter and 50+ on X, gaining 20k+ followers.",
             skills: ["🎨 Design", "Cartoon", "Procreate", "Animation"]
     

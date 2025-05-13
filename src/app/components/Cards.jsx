@@ -3,10 +3,19 @@ import WiggleElement from './WiggleElement'
 
 const projects = [
     {
+        title: "Undergraduate Researcher – Computational Neuroscience & Data Analytics",
+        image: "/images/nsd.png",
+        description: "Conducting exploratory data analysis of the Natural Scene Dataset (NSD) (73,000+ image conditions) via AWS to investigate visual representation across 7 brain ROIs...Like opening a Pandora’s box, each insight leads to new questions. ",
+        tag: ["📊 Data", "Exploratory Data Analysis", "Natural Scenes Dataset (NSD)", "R", "Python", "SQL", "AWS"],
+        status: "View Project",
+        clickable: true,
+        href: "https://github.com/0CocoWang0/NSD_cogsci"
+    },
+    {
         title: "Website for NORD consulting club at McGill",
         image: "/images/webproj1.png",
         description: "Leading the revamp of NORD Consulting’s website to enhance UI/UX, modernize the design, and improve SEO.",
-        tag: ["💻 Website", "Webflow", "Front-end Dev"],
+        tag: ["💻 Website", "Webflow", "Front-end Dev", "CMS", "SSR"],
         status: "View Project",
         clickable: true,
         href:"https://msbn-consulting.webflow.io"
@@ -15,7 +24,7 @@ const projects = [
         title: "ARPPLE: When Arts Ripple - a novel solution for artists",
         image: "/images/arpple.jpg",
         description: "Currently developing core features, including user authentication, artwork trading, and subscription-based monetization.",
-        tag: ["💻 Website", "🍎 Software", "Full-stack Dev", "React", "Next.js"],
+        tag: ["💻 Website", "🍎 Software", "Full-stack Dev", "React", "Next.js", "SSR"],
         status: "In Progress",
         clickable: true,
         href: "https://arpple.vercel.app/#"
@@ -29,15 +38,7 @@ const projects = [
         clickable: false,
         href:null
     },
-    {
-        title: "More to come...",
-        image: "/images/anime.jpeg",
-        description: "New ways to explore my parallel universe.",
-        tag: ["🎮 Game", "Unity", "C#", "Game Dev"],
-        status: "In progress",
-        clickable: false,
-        href: null
-    },
+    
 
 ]
 

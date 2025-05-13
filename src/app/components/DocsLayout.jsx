@@ -50,11 +50,11 @@ export default function DocsLayout({children}) {
 
           <main 
             className={`
-              pt-10 md:pt-8 p-3 bg-[#2A2929] transition-all duration-500
+              pt-10 md:pt-8 bg-[#2A2929] transition-all duration-500
               ${!isMobile && isOpen ? "w-full" : "md:-ml-175 w-full"}
             `}
           >
-            <div className="p-5 md:p-10 rounded-2xl bg-[#191919] overflow-auto h-full w-full">
+            <div className="p-6 md:p-7 rounded-2xl bg-[#191919] overflow-auto h-full w-full">
               {children}
             </div>
           </main>
