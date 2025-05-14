@@ -22,10 +22,10 @@ export const metadata = {
     description: "Explore what Keming Wang has done across web development, neuroscience, analytics, and the arts. She plays and learns like universe, never overfitting.",
     type: "website",
     locale: "en_US",
-    url:"https://magico-space.vercel.app/#about",
+    url:"https://magico-space.vercel.app/",
     images: [
       {
-        url:"/images/og.png",
+        url:"https://magico-space.vercel.app/images/og.png",
         width: 1200,
         height: 630,
         alt: "Magico Space cover"
@@ -35,7 +35,8 @@ export const metadata = {
   twitter:{
     card: "summary_large_image",
     title: "You're landing in Magico Space",
-    description: "Explore what Keming Wang has done across web development, neuroscience, analytics, and the arts. She plays and learns like universe, never overfitting.",
+    description: "She plays and learns like universe, never overfitting.",
+    images: ["https://magico-space.vercel.app/images/og.png"],
   },
   
   

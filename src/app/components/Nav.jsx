@@ -30,7 +30,7 @@ const Nav = ({ setIsOpen, isMobile }) => {
     const navInfo = [
         {
             section: "Home",
-            subs: ["# Abut me", "# Explore", "# My Tech Stack"],            
+            subs: ["# About me", "# Explore", "# My Tech Stack"],            
             href: ["/#about", "/#explore", "/#tech"]
         },
 

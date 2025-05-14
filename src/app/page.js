@@ -69,7 +69,7 @@ export default function Home() {
 
         <section id="explore" className="mb-20">
           <p className="pb-5 text-lg"><span className="text-[#727272] pr-2">#</span>Explore</p>
-          <p className="text-[#727272] text-sm mb-5">Explore some of my projects done for school clubs, artists, gamers.</p>
+          <p className="text-[#727272] text-sm mb-5">Explore some of my projects done for school clubs, artists, and gamers.</p>
             <Cards />
         </section>
 
