@@ -6,7 +6,7 @@ const HeadProfile = () => {
   return (
     <div id="navbar" >
             <div id="profile" className="flex items-center">
-                <img src="/images/kwicon.png" alt="Toggle Sidebar" className="h-15 rounded-2xl" />
+                <img src="/images/profile-fun.png" alt="Toggle Sidebar" className="h-15 rounded-2xl" />
                 <div className="pl-5 flex-row">
                     <span>
                         <h1 className='text-md font-bold'>Keming Wang</h1>

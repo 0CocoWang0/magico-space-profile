@@ -37,9 +37,7 @@ export const metadata = {
     title: "You're landing in Magico Space",
     description: "Explore what Keming Wang has done across web development, neuroscience, analytics, and the arts. She plays and learns like universe, never overfitting.",
   },
-  icons: {rel:'icon', 
-    icon:'/images/favicon.png?v=2',
-}
+  
   
 }
 export const viewport = {
@@ -55,6 +53,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      
       <body className="cursor-none h-full ">
         <Cursor />
         <header className="absolute p-3  items-center z-50 flex w-screen">         

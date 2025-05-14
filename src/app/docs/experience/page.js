@@ -106,50 +106,60 @@ const Page = () => {
     }
   ]
 
+  const heroImg = "/images/heroImg/exp.jpeg"
 
 
   return (
-    <div className="md:p-10 md:px-[15%] pt-10">
-      <WiggleElement>
-        <p className="opacity-80 text-white text-6xl mb-10 md:mb-20 md:text-7xl">Experience / </p>
-      </WiggleElement>
-
-      <section className=''>
-        <div className='flex-wrap flex gap-5'>
-          <p className=" text-lg"><span className="text-[#727272] pr-2">#</span>Keming as </p>
-          
-          <div className="inline-flex gap-5 bg-[#2A2929] p-1 rounded-lg justfy-center -mt-1 px-1 md:px-3">
-                {expList.map((exp, index) => (
-                        <button
-                            key={exp.tab}
-                            className={`text-sm p-1 md:px-3 transition-all ease-in-out hover:bg-[#727272] hover:text-black ${index === active ? "bg-[#000000] rounded-lg text-white" : "rounded-lg text-[#727272]"}`}
-                            onClick={() => setActive(index)}
-                        >
-                            {exp.tab}
-                        </button>                        
-                ))}
-            </div>
+    <>
+      <header>
+        <div className="flex h-60 bg-amber-400 overflow-clip">
+          <img src={heroImg} className="h-full w-full bg-amber-900 object-[0px_30%] object-cover"/>
         </div>
-        <p className="text-[#727272] text-sm mt-5 mb-15">Select your scope...</p>
+        
+      </header>
 
-        <div className="relative w-full">
-          
-                        <AnimatePresence mode="wait">
-                        <motion.div
-                            key={active}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 30}}
-                            transition={{ duration: 0.3 }}
-                            className="absolute w-full"
-                        >
-                           <Exp expList={expList[active]}/>
-                        </motion.div>
-                        </AnimatePresence>
-        </div>
-      </section>
+      <div className="md:p-10 md:px-[15%] pt-10 p-6">
+        
+        <WiggleElement>
+            <p className="opacity-80 text-white text-6xl mb-10 md:mb-20 md:text-7xl">Experience / </p>
+        </WiggleElement>
+        <section className=''>
+          <div className='flex-wrap flex gap-5'>
+            <p className=" text-lg"><span className="text-[#727272] pr-2">#</span>Keming as </p>
+            
+            <div className="inline-flex gap-5 bg-[#2A2929] p-1 rounded-lg justfy-center -mt-1 px-1 md:px-3">
+                  {expList.map((exp, index) => (
+                          <button
+                              key={exp.tab}
+                              className={`text-sm p-1 md:px-3 transition-all ease-in-out hover:bg-[#727272] hover:text-black ${index === active ? "bg-[#000000] rounded-lg text-white" : "rounded-lg text-[#727272]"}`}
+                              onClick={() => setActive(index)}
+                          >
+                              {exp.tab}
+                          </button>                        
+                  ))}
+              </div>
+          </div>
+          <p className="text-[#727272] text-sm mt-5 mb-15">Select your scope...</p>
 
-    </div>
+          <div className="relative w-full">
+            
+                          <AnimatePresence mode="wait">
+                          <motion.div
+                              key={active}
+                              initial={{ opacity: 0, y: 20 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              exit={{ opacity: 0, y: 30}}
+                              transition={{ duration: 0.3 }}
+                              className="absolute w-full"
+                          >
+                            <Exp expList={expList[active]}/>
+                          </motion.div>
+                          </AnimatePresence>
+          </div>
+        </section>
+
+      </div>
+    </>
   )
 }
 
