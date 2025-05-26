@@ -12,7 +12,7 @@ const Page = () => {
         {
           time: "2025.01 - Present",
           title: "Full-Stack Developer & Founder",
-          company: "Arpple · Montreal, QC, Canada · On-site",
+          company: "Aripple · Montreal, QC, Canada · On-site",
           description: "Created and customized a social platform for artists to identify usability and monetization gaps. Currently implementing 5+ core features such as user authentication, artwork trading, and subscription-based monetization",
           skills: ["🍎 Software", "💻 Website", "Full-stack development", "React", "UI/UX design"],
           link:""
@@ -51,10 +51,10 @@ const Page = () => {
         },
         {
           time: "2023.03 - 2023.04",
-          title: "2023 Winter Micro-Exp Program Intern",
-          company: "McGill University · Montreal, QC, Canada · On-site",
-          description: "Researched and analyzed 5+ competitor websites to inform UI improvements and marketing strategy. Redesigned outdated web platform using SquareSpace interactive prototypes to optimize UI/UX",
-          skills: ["💻 Website", "🎨 Design", "UI/UX design", "Website prototyping", "Graphic Design"],
+          title: "Business Intelligence & UX intern",
+          company: "PACE Farm · Montreal, QC, Canada · Hybrid",
+          description: "Conducted competitive analysis of 5+ agricultural tech websites to identify strategic opportunities for digital growth. Delivered actionable insights and visual reports to guide UI/UX redesign and marketing decisions for internal stakeholders. Produced design prototypes using SquareSpace to enhance site usability and align with user behavior trends.",
+          skills: ["💻 Website", "🎨 Design", "Information analytics", "UI/UX design", "Website prototyping", "Graphic Design"],
           link:""
         },
         {

@@ -9,7 +9,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata = {
   metadataBase: new URL("https://magico-space.vercel.app/"),
   title: "You're landing in Magico Space",
-  description: "Explore what Keming Wang has done across web development, neuroscience, analytics, and the arts. She plays and learns like universe, never overfitting.",
+  description: "She plays and learns like universe, never overfitting. Explore what Keming Wang has done across web development, neuroscience, analytics, and the arts.",
   keywords:[
     "web development", "data science", "analyst", "neuroscience", "portfolio",
     "Keming Wang", "Coco Wang", "McGill University", "creative coding", "artist", "UI design", "UX"
@@ -19,7 +19,7 @@ export const metadata = {
   charset: "UTF-8",
   openGraph:{
     title:  "You're landing in Magico Space",
-    description: "Explore what Keming Wang has done across web development, neuroscience, analytics, and the arts. She plays and learns like universe, never overfitting.",
+    description: "She plays and learns like universe, never overfitting. Explore what Keming Wang has done across web development, neuroscience, analytics, and the arts.",
     type: "website",
     locale: "en_US",
     url:"https://magico-space.vercel.app/",

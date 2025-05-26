@@ -2,7 +2,7 @@ import React from 'react'
 import '@/app/layout.js'
 import WiggleElement from '@/app/components/WiggleElement'
 
-const heroImg = "/images/heroImg/anime.jpeg"
+const heroImg = "/images/heroImg/anime.png"
 
 const page = () => {
   return (

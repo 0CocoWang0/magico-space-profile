@@ -21,7 +21,7 @@ const projects = [
         href:"https://msbn-consulting.webflow.io"
     },
     {
-        title: "ARPPLE: When Arts Ripple - a novel solution for artists",
+        title: "ARIPPLE: When Arts Ripple - a novel solution for artists",
         image: "/images/arpple.jpg",
         description: "Currently developing core features, including user authentication, artwork trading, and subscription-based monetization.",
         tag: ["💻 Website", "🍎 Software", "Full-stack Dev", "React", "Next.js", "SSR"],
