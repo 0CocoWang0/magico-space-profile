@@ -27,7 +27,7 @@ const projects = [
         tag: ["💻 Website", "🍎 Software", "Full-stack Dev", "React", "Next.js", "SSR"],
         status: "In Progress",
         clickable: true,
-        href: "https://arpple.vercel.app/#"
+        href: "https://aripple.vercel.app"
     },
     {
         title: "Being an artist in the digital age",
