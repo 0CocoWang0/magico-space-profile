@@ -90,7 +90,7 @@ const Page = () => {
             company: "Self-Employed · Remote",
             description: "Uploaded 100+ digital artworks on Lofter and 50+ on X, gaining 20k+ followers.",
             skills: ["🎨 Design", "Cartoon", "Procreate", "Animation"],
-            link:"magicospace.carrd.co"
+            link:"https://magicospace.carrd.co"
             }
             
     ] 
