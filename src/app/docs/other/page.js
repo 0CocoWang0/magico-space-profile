@@ -2,14 +2,14 @@ import React from 'react'
 import '@/app/layout.js'
 import WiggleElement from '@/app/components/WiggleElement'
 
-const heroImg = "/images/heroImg/anime.png"
+const heroImg = "/images/heroImg/other.png"
 
 const page = () => {
   return (
     <>
       <header>
         <div className="flex h-60 bg-amber-400 overflow-clip">
-          <img src={heroImg} className="h-full w-full bg-amber-900 object-cover"/>
+          <img src={heroImg} className="h-full w-full object-[0px_80%] bg-amber-900 object-cover"/>
         </div>
         
         

@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react'
 const Exp = ({expList}) => {
     const content = expList.content
 
-
     return (
         <div className='flex flex-col gap-15 border-l-3 border-[#2A2929] mb-30'>
             {content.map((exp, index) => (
@@ -25,6 +24,19 @@ const Exp = ({expList}) => {
                             </WiggleElement>                        
                         ))}
                     </div>
+                {exp.link && (
+                    <a
+                    href={exp.link}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='mt-2 inline-block'
+                    >
+                    <button className='mt-1 px-3 py-1 text-[12px] bg-[#91EAE4] text-black rounded-md hover:bg-[#B2F2EF] transition-all'>
+                        View Details
+                    </button>
+                    </a>
+                )}
+
                 </div>
             ))}
             
