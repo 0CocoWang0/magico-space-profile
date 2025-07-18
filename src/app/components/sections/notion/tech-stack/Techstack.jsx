@@ -1,6 +1,6 @@
 "use client";
 import { Treemap, Tooltip as ReTooltip, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Legend } from "recharts";
-import Tabs from "@/app/components/Tabs";
+import Tabs from "@/app/components/sections/notion/tech-stack/Tabs";
 import CustomContent from "./CustomContent";
 
 const techStack = [
@@ -30,7 +30,7 @@ export default function TechStackCharts() {
               data={techStack}
               dataKey="usage"
               nameKey="name"
-              content = {<CustomContent />}
+              content={<CustomContent />}
             >
               <ReTooltip />
             </Treemap>

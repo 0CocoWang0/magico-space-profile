@@ -1,5 +1,5 @@
 import Image from "next/image";
-import WiggleElement from "../../components/WiggleElement";
+import WiggleElement from "../../components/shared/WiggleElement";
 
 
 export default function Showcase() {

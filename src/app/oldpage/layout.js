@@ -1,6 +1,6 @@
 import "@/app/oldpage/globals.css";
 import Image from "next/image";
-import Cursor from "../components/Cursor";
+import Cursor from "../components/shared/Cursor";
 
 export const metadata = {
   title: "You're landing in Magico Space",

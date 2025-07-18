@@ -1,6 +1,6 @@
 import React from 'react'
 import '@/app/layout.js'
-import WiggleElement from '@/app/components/WiggleElement'
+import WiggleElement from '@/app/components/shared/WiggleElement'
 
 const heroImg = "/images/heroImg/other.png"
 
@@ -9,7 +9,7 @@ const page = () => {
     <>
       <header>
         <div className="flex h-60 bg-amber-400 overflow-clip">
-          <img src={heroImg} className="h-full w-full object-[0px_80%] bg-amber-900 object-cover"/>
+          <img src={heroImg} className="h-full w-full object-[0px_74%] bg-amber-900 object-cover"/>
         </div>
         
         

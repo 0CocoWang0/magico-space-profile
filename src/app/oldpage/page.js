@@ -1,8 +1,8 @@
 import Navbar from "@/app/oldpage/components/Navbar/Navbar";
 import Showcase from "@/app/oldpage/components/Showcase";
 import About from "@/app/oldpage/components/About";
-import WiggleElement from "@/app/components/WiggleElement";
-import Cursor from "@/app/components/Cursor";
+import WiggleElement from "@/app/components/shared/WiggleElement";
+import Cursor from "@/app/components/shared/Cursor";
 import Link from "next/link";
 
 

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import '@/app/oldpage/components/Navbar/Navbar.css';
 import React, { useState, useEffect } from "react";
-import WiggleElement from "@/app/components/WiggleElement";
+import WiggleElement from "@/app/components/shared/WiggleElement";
 import {Link} from "react-scroll";
 
 

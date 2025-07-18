@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import WiggleElement from '../../components/WiggleElement'
+import WiggleElement from '../../components/shared/WiggleElement'
 
 const About = () => {
 
