@@ -1,4 +1,4 @@
-import WiggleElement from "@/app/components/shared/WiggleElement";
+import WiggleElement from "./components/shared/WiggleElement";
 import Techstack from "./components/sections/notion/tech-stack/Techstack";
 import Cards from "./components/sections/notion/Cards";
 import DocsLayout from "./components/sections/notion/DocsLayout";

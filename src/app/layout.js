@@ -1,8 +1,6 @@
-import "@/app/globals.css";
+import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import Cursor from "@/app/components/shared/Cursor";
-import DocsLayout from "./components/sections/notion/DocsLayout";
-import Contact from "./components/shared/Contact";
+import Cursor from "./components/shared/Cursor";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 

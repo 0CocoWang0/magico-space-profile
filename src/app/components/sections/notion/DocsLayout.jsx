@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from "react";
-import "@/app/globals.css";
-import Nav from "@/app/components/sections/notion/side-nav/Nav";
+import "../../../globals.css";
+import Nav from "./side-nav/Nav";
 import HeadProfile from "./HeadProfile";
 
 

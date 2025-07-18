@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import PfpStack from "./PfpStack"
-import useIsMobile from "@/app/hooks/useIsMobile";
+import useIsMobile from "../../../hooks/useIsMobile";
 import Planet from "./Planet"
 import Contact from "../../shared/Contact";
 

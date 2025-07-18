@@ -1,8 +1,8 @@
 // components/HeroNav.jsx
 import React, { useEffect, useState } from "react";
-import Contact from "@/app/components/shared/Contact.jsx";
+import Contact from "../../shared/Contact.jsx";
 import { motion, AnimatePresence } from "framer-motion";
-import useIsMobile from "@/app/hooks/useIsMobile";
+import useIsMobile from "../../../hooks/useIsMobile";
 
 const PfpStack = () => {
     const isMobile = useIsMobile(640); // Use custom hook to determine if mobile

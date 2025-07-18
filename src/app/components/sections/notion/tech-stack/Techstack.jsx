@@ -1,6 +1,6 @@
 "use client";
 import { Treemap, Tooltip as ReTooltip, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Legend } from "recharts";
-import Tabs from "@/app/components/sections/notion/tech-stack/Tabs";
+import Tabs from "./Tabs";
 import CustomContent from "./CustomContent";
 
 const techStack = [

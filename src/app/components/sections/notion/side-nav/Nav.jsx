@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
-import SmoothLink from '@/app/components/sections/notion/side-nav/SmoothLink';
+import SmoothLink from './SmoothLink';
 
 
 const Nav = ({ setIsOpen, isMobile }) => {
