@@ -1,13 +1,14 @@
-// components/HeroNav.jsx
 import React, { useEffect, useState } from "react";
-import Contact from "../../shared/Contact.jsx";
+import Contact from "./Contact.jsx";
 import { motion, AnimatePresence } from "framer-motion";
-import useIsMobile from "../../../hooks/useIsMobile";
+import useIsMobile from "../../hooks/useIsMobile";
+import useSectionInView from "../../hooks/useSectionInView";
 
 const PfpStack = () => {
     const isMobile = useIsMobile(640); // Use custom hook to determine if mobile
     const [time, setTime] = useState("");
     const [isNight, setIsNight] = useState(false);
+    const isHeroInView = useSectionInView("hero");
 
     // Update time every second
     useEffect(() => {
@@ -29,19 +30,32 @@ const PfpStack = () => {
     }, []);
 
     return (
-        <nav className={`hero-nav sticky gap-4 top-4 z-50 backdrop-blur-md bg-[rgba(42,41,41,0.6)] transition-all duration-300`}>
-            <img
+        <nav
+            className={`
+                hero-nav gap-2 p-1 sm:px-4 sm:gap-4 top-4 z-110
+                backdrop-blur-3xl
+                bg-white/10
+                border border-white/20
+                rounded-xl
+                shadow-[0_4px_30px_rgba(0,0,0,0.1)]
+                transition-all duration-300
+                flex
+            
+            `}
+        >            <img
                 src="/images/nav/profile-fun.png"
                 alt="Profile"
                 className="w-[40px] h-[40px] border-[1px] border-black rounded-[10px]"
             />
-            {
-                isMobile ? (
-                    <p>Keming Wang</p>
-                ) : (
-                    <p>王可名 · Keming Wang</p>
-                )
-            }
+            <button>
+                {
+                    isMobile ? (
+                        <a href="#hero">Keming Wang</a>
+                    ) : (
+                        <a href="#hero">王可名 · Keming Wang</a>
+                    )
+                }
+            </button>
 
             <span className="flex gap-1 items-center text-sm">
                 <img src="/images/nav/pin.jpg" className="w-3 h-3" />

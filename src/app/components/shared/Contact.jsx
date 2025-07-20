@@ -19,7 +19,7 @@ const Contact = () => {
     }
   ]
   return (
-    <div className="flex sm:gap-6 gap-8 align-bottom">
+    <button className="flex sm:gap-6 gap-8 align-bottom">
       {
         contactLinks.map((link, index) => (
           <a key={index} href={link.href} target="_blank" alt={link.alt}>
@@ -27,7 +27,7 @@ const Contact = () => {
           </a>
         ))
       }
-    </div>
+    </button>
   )
 }
 

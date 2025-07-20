@@ -2,10 +2,10 @@
 
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
-import PfpStack from "./PfpStack"
 import useIsMobile from "../../../hooks/useIsMobile";
 import Planet from "./Planet"
 import Contact from "../../shared/Contact";
+import PfpStack from "../../shared/PfpStack";
 
 
 export default function HeroWithWave() {
@@ -48,7 +48,7 @@ export default function HeroWithWave() {
     }, [])
 
     return (
-        <section className="relative md:p-30 flex flex-col md:h-screen h-screen min-h-[700px] bg-[#0f0f0f] text-white items-center justify-center">
+        <section id="hero" className="z-105 snap-start relative md:p-30 flex flex-col md:h-screen h-screen min-h-[700px] bg-[#0f0f0f] text-white items-center justify-center">
 
             <div className="mb-15 sticky top-5 z-50">
                 <PfpStack />
@@ -59,8 +59,8 @@ export default function HeroWithWave() {
                 )}
             </div>
             <h1 className="z-10 mb-30 sm:text-5xl text-3xl md:text-center font-bold">Systems thinker with an interdisciplinary background
-                in <span className="">Cognitive Science</span> and <span className="">Computer Science.</span><br />
-                I craft thoughtful, cross-functional solutions <br /> that are <span className="text-green-400">easy to follow, yet hard to forget.</span></h1>
+                in <span className="">Cognitive and Computer Science.</span><br />
+                I craft creative solutions <br /> that are <span className="text-green-400">easy to follow, hard to forget.</span></h1>
 
             <Planet
                 size={120}

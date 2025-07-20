@@ -67,7 +67,7 @@ const Cards = () => {
                                 ))}
                             </div>
                             <div className='place-self-end px-5'>
-                                <button className={`text-[10px] inline-flex items-center justify-self-center gap-2 pointer-events-auto font-semibold rounded-lg px-2 py-2 ${project.clickable ? " text-white cursor-pointer group-hover:underline decoration-[#91EAE4] decoration-wavy" : "text-[#727272] pointer-events-none"}`}>
+                                <button className={`text-[10px] inline-flex items-center justify-self-center gap-2 pointer-events-auto font-semibold rounded-lg px-2 py-2 ${project.clickable ? " text-white group-hover:underline decoration-[#91EAE4] decoration-wavy" : "text-[#727272] pointer-events-none"}`}>
                                     {project.status}
                                     <img src="/images/nav/arrowdown.jpg" className="h-1 -rotate-90 transform transition-transform duration-200 group-hover:translate-x-[3px]" />
                                 </button>

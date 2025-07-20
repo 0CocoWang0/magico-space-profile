@@ -2,12 +2,12 @@
 import React from 'react'
 import { usePathname } from 'next/navigation'
 
-const SmoothLink = ({href, children, className, onClick}) => {
+const SmoothLink = ({ href, children, className, onClick }) => {
     const pathname = usePathname()
-        const handleClick = (e) => {
-            const [targetPath, hash] = href.split('#')
+    const handleClick = (e) => {
+        const [targetPath, hash] = href.split('#')
 
-            if (pathname === targetPath && hash) {
+        if (pathname === targetPath && hash) {
             e.preventDefault()
             const element = document.getElementById(hash)
             if (element) {
@@ -19,9 +19,9 @@ const SmoothLink = ({href, children, className, onClick}) => {
         if (onClick) onClick(e)
     }
     return (
-        <a href={href} onClick={handleClick} className={className}>{children}</a>
+        <button href={href} onClick={handleClick} className={className}>{children}</button>
     )
 }
-  
+
 
 export default SmoothLink

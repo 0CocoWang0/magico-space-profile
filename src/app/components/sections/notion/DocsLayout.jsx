@@ -1,13 +1,28 @@
 'use client'
-import { useState, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import "../../../globals.css";
 import Nav from "./side-nav/Nav";
 import HeadProfile from "./HeadProfile";
-
+import { useSwipeScroll } from "../../../hooks/useSwipeScroll";
+import useIsMobile from "../../../hooks/useIsMobile";
 
 export default function DocsLayout({ children }) {
   const [isOpen, setIsOpen] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+
+  //scroll till a threshold to go back to home
+  const heroRef = useRef(null)
+  const notionRef = useRef(null)
+
+  useSwipeScroll({
+    onSwipeUp: () => {
+      notionRef.current?.scrollIntoView({ behavior: "smooth" })
+    },
+    onSwipeDown: () => {
+      heroRef.current?.scrollIntoView({ behavior: "smooth" })
+    },
+    threshold: 90, // adjust to your liking
+  })
 
   //auto-collapse on small screens
   useEffect(() => {
@@ -31,28 +46,34 @@ export default function DocsLayout({ children }) {
     <>
 
       {/* notion layout starts here*/}
-      <div className="flex h-screen">
+      <div className="flex h-screen snap-start">
 
-        <button onClick={() => setIsOpen((prev) => !prev)} className="absolute left-10 z-101 h-7 w-7 p-1 text-white rounded bg-[#2A2929]  hover:bg-[#000]">
+        <button onClick={() => setIsOpen((prev) => !prev)} className="fixed left-10 top-5 z-101 h-7 w-7 p-1 text-white rounded bg-[#2A2929]  hover:bg-[#000]">
           <img src="/images/nav/toggle.jpg" alt="Toggle Sidebar" className="h-full w-full object-contain" />
         </button>
 
         <aside
-          className={`scrollbar-hide z-100 h-full duration-300 ease-in-out transition-transform
-              fixed md:static md:w-175 w-full
-              ${isOpen ? 'translate-x-0' : 'w-0 -translate-x-full'}
-            bg-[#2A2929] overflow-auto`}>
-          <div className="m-5 mt-15 md:mt-20 p-5">
+          className={`
+          scrollbar-hide z-100 h-full bg-[#2A2929] overflow-auto
+          transition-all duration-300 ease-in-out flex-shrink-0
+        `}
+          style={{
+            flexBasis: isOpen ? (isMobile ? '100%' : '30%') : '0px',
+          }}
+        >
+          <div
+            className={`m-5 mt-15 md:mt-20 p-5 transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+              }`}
+          >
             <HeadProfile />
             <Nav setIsOpen={setIsOpen} isMobile={isMobile} />
-
           </div>
         </aside>
 
+
         <main
           className={`
-              md:p-3 bg-[#2A2929] transition-all duration-500
-              ${!isMobile && isOpen ? "w-full" : "md:-ml-175 w-full"}
+              flex-1 md:p-3 bg-[#2A2929] transition-all duration-500 w-full
             `}
         >
           <div className="rounded-2xl bg-[#191919] overflow-auto h-full w-full">

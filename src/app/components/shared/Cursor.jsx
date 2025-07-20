@@ -18,10 +18,11 @@ const Cursor = () => {
         let currentX = 0;
         let currentY = 0;
 
-        const textTags = ["P", "SPAN", "H1", "H2", "H3", "H4", "H5", "H6", "A", "LI", "BUTTON", "LABEL"];
+        const textTags = ["P", "SPAN", "H1", "H2", "H3", "H4", "H5", "H6", "LI", "LABEL"];
 
         const isElementNearText = (el) => {
             if (!el) return false;
+
             if (textTags.includes(el.tagName)) return true;
             let parent = el.parentElement;
             let count = 0;
@@ -47,17 +48,37 @@ const Cursor = () => {
 
             // Detect element under cursor once per frame, update dot style directly
             const el = document.elementFromPoint(mouseX, mouseY);
+            //cursor transform logic
+            const isClickable = (() => {
+                let node = el;
+                while (node) {
+                    if (node.tagName === "BUTTON") return true;
+                    node = node.parentElement;
+                }
+                return false;
+            })();
+
             const nearText = isElementNearText(el);
 
-            if (nearText) {
+            // Prioritize clickable over text
+            if (isClickable) {
+                dot.style.width = "20px";
+                dot.style.height = "20px";
+                dot.style.borderRadius = "9999px";
+                dot.style.backgroundColor = "white";
+            } else if (nearText) {
                 dot.style.width = "2px";
-                dot.style.height = "40px";
+                dot.style.height = "30px";
                 dot.style.borderRadius = "2px";
+                dot.style.backgroundColor = "#7bf1a8";
             } else {
                 dot.style.width = "12px";
                 dot.style.height = "12px";
                 dot.style.borderRadius = "9999px";
+                dot.style.backgroundColor = "#7bf1a8";
             }
+
+
 
             requestAnimationFrame(animate);
         };
@@ -79,7 +100,7 @@ const Cursor = () => {
             />
             <div
                 ref={dotRef}
-                className="fixed top-0 left-0 bg-green-300 z-[901] pointer-events-none mix-blend-difference transition-all duration-300 ease-out"
+                className="fixed -top-2 -left-3 bg-green-300 z-[901] pointer-events-none mix-blend-difference transition-all duration-300 ease-out"
                 style={{ transform: "translate3d(0, 0, 0)" }}
             />
         </>

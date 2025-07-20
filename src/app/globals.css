@@ -1,4 +1,9 @@
 @import "tailwindcss";
+html,
+body,
+* {
+  cursor: none !important;
+}
 
 :root {
   --background: #2a2929;
@@ -40,21 +45,15 @@ button {
   -webkit-overflow-scrolling: touch; /* nice webkit native scroll */
 }
 .hero-nav {
-  display: flex;
   align-items: center;
   width: fit-content;
-  height: 50px;
+  height: fit-content;
   border-radius: 10px;
-  background-color: rgba(42, 41, 41, 1); /* Fallback, overridden by Tailwind */
-  padding: 0 15px;
   margin: 0 auto;
-  justify-content: center;
-
   backdrop-filter: blur(8px); /* for older browsers if needed */
   -webkit-backdrop-filter: blur(8px);
 }
 .hero-nav a {
-  color: #979797;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
