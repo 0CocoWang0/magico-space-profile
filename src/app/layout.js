@@ -6,9 +6,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   metadataBase: new URL("https://magico-space.vercel.app/"),
-  title: "You're landing in Magico Space",
+  title: "Keming Wang | Designer, Developer, Artist",
   description:
-    "She plays and learns like universe, never overfitting. Explore what Keming Wang has done across web development, neuroscience, analytics, and the arts.",
+    "You are landing in Magico Space. I play and learn like universe, never overfitting.",
   keywords: [
     "web development",
     "data science",
@@ -20,32 +20,32 @@ export const metadata = {
     "McGill University",
     "creative coding",
     "artist",
-    "UI design",
+    "UI",
     "UX",
   ],
   authors: [{ name: "Keming Wang" }],
   creator: "Keming Wang",
   charset: "UTF-8",
   openGraph: {
-    title: "You're landing in Magico Space",
-    description:
-      "She plays and learns like universe, never overfitting. Explore what Keming Wang has done across web development, neuroscience, analytics, and the arts.",
+    title: "Keming Wang | Designer, Developer, Artist",
+    description: "Keming Wang's creative profile.",
     type: "website",
     locale: "en_US",
-    url: "https://magico-space.vercel.app/",
+    url: "https://kemingwang.xyz",
     images: [
       {
-        url: "https://magico-space.vercel.app/images/og.png",
+        url: "https://kemingwang.xyz/images/OG.png",
         width: 1200,
         height: 630,
-        alt: "Magico Space cover",
+        alt: "Keming Wang site cover",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "You're landing in Magico Space",
-    description: "She plays and learns like universe, never overfitting.",
+    title: "Keming Wang | Designer, Developer, Artist",
+    description:
+      "You are landing in Magico Space. I play and learn like universe, never overfitting.",
     images: ["https://magico-space.vercel.app/images/og.png"],
   },
 };
