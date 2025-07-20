@@ -48,7 +48,8 @@ export default function DocsLayout({ children }) {
       {/* notion layout starts here*/}
       <div className="flex h-screen snap-start">
 
-        <button onClick={() => setIsOpen((prev) => !prev)} className="fixed left-10 top-5 z-101 h-7 w-7 p-1 text-white rounded bg-[#2A2929]  hover:bg-[#000]">
+        <button onClick={() => setIsOpen((prev) => !prev)} className="fixed left-10 top-5 z-101 h-7 w-7 p-1 text-white rounded backdrop-blur-3xl
+                bg-black/10  hover:bg-[#000] focus:bg-[#000] active:bg-[#000] active:scale-125">
           <img src="/images/nav/toggle.jpg" alt="Toggle Sidebar" className="h-full w-full object-contain" />
         </button>
 
