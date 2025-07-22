@@ -5,9 +5,9 @@ import Contact from '../../shared/Contact';
 const HeadProfile = () => {
     return (
         <div id="navbar" >
-            <div id="profile" className="items-center lg:flex">
-                <img src="/images/nav/profile-fun.png" alt="Toggle Sidebar" className="h-15 rounded-2xl mb-5 lg:mb-0" />
-                <div className="lg:pl-5 flex-row">
+            <div id="profile" className="items-center">
+                <img src="/images/nav/profile-fun.png" alt="Toggle Sidebar" className="h-15 rounded-2xl mb-5" />
+                <div className="flex-row">
                     <span>
                         <h1 className='text-md font-bold'>Keming Wang</h1>
                         <p className='text-sm text-[#727272]'>Neuroscience | Computer Science | Linguistics</p>

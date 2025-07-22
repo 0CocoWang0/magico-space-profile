@@ -1,18 +1,22 @@
 'use client'
 import { useState, useRef, useEffect } from "react";
 import "../../../globals.css";
-import Nav from "./side-nav/Nav";
+import Nav from "./Nav";
 import HeadProfile from "./HeadProfile";
 import { useSwipeScroll } from "../../../hooks/useSwipeScroll";
-import useIsMobile from "../../../hooks/useIsMobile";
+import NotionSection from "./NotionSection";
+import Exp from "./Exp";
+import Topbar from "./Topbar";
+//import { useParams } from "next/navigation";
 
-export default function DocsLayout({ children }) {
+export default function DocsLayout({ slug }) {
   const [isOpen, setIsOpen] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
   //scroll till a threshold to go back to home
   const heroRef = useRef(null)
   const notionRef = useRef(null)
+
 
   useSwipeScroll({
     onSwipeUp: () => {
@@ -44,11 +48,10 @@ export default function DocsLayout({ children }) {
 
   return (
     <>
-
       {/* notion layout starts here*/}
-      <div className="flex h-screen snap-start">
+      <div id="projects" className="flex h-screen snap-start">
 
-        <button onClick={() => setIsOpen((prev) => !prev)} className="fixed left-10 top-5 z-101 h-7 w-7 p-1 text-white rounded backdrop-blur-3xl
+        <button onClick={() => setIsOpen((prev) => !prev)} className="z-101 fixed left-10 top-5 h-7 w-7 p-1 text-white rounded backdrop-blur-3xl
                 bg-black/10  hover:bg-[#000] focus:bg-[#000] active:bg-[#000] active:scale-125">
           <img src="/images/nav/toggle.jpg" alt="Toggle Sidebar" className="h-full w-full object-contain" />
         </button>
@@ -59,11 +62,11 @@ export default function DocsLayout({ children }) {
           transition-all duration-300 ease-in-out flex-shrink-0
         `}
           style={{
-            flexBasis: isOpen ? (isMobile ? '100%' : '30%') : '0px',
+            flexBasis: isOpen ? (isMobile ? '100%' : '20%') : '0px',
           }}
         >
           <div
-            className={`m-5 mt-15 md:mt-20 p-5 transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            className={`m-5 p-5 mt-10 transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
               }`}
           >
             <HeadProfile />
@@ -71,16 +74,16 @@ export default function DocsLayout({ children }) {
           </div>
         </aside>
 
-
         <main
           className={`
-              flex-1 md:p-3 bg-[#2A2929] transition-all duration-500 w-full
-            `}
+              flex-1 md:p-3 bg-[#2A2929] transition-all duration-500 w-full`}
         >
           <div className="rounded-2xl bg-[#191919] overflow-auto h-full w-full">
-            {children}
+            {slug && <Topbar slug={slug} />}
+            {slug ? <Exp slug={slug} /> : <NotionSection />}
           </div>
         </main>
+
 
       </div >
     </>

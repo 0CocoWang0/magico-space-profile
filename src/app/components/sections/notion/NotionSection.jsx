@@ -1,7 +1,5 @@
 import React from 'react'
-import WiggleElement from "../../../shared/WiggleElement";
-import Techstack from "../tech-stack/Techstack";
-import Cards from "../Cards";
+import Cards from "./Cards";
 
 const aboutme = [
     "3️⃣rd year McGill student in Honours Cognitive Science",
@@ -19,7 +17,7 @@ const heroImg = "/images/heroImg/home.jpeg";
 const NotionSection = () => {
     return (
 
-        <section id="projects">
+        <section className="flex h-screen snap-start">
             <div className="p-5">
                 <Cards />
             </div>

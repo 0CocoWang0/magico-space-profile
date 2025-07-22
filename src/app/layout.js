@@ -63,9 +63,7 @@ export default function RootLayout({ children }) {
       <body className="cursor-none h-full ">
         <Cursor />
         <header className="absolute p-3  items-center z-50 flex w-screen"></header>
-
         <main className=" cursor-none scroll-smooth">{children}</main>
-
         <Analytics />
         <SpeedInsights />
       </body>

@@ -2,6 +2,8 @@
 import React from 'react'
 import WiggleElement from '../../shared/WiggleElement'
 import Masonry from 'react-masonry-css'
+import Link from 'next/link'
+import projectsData from '../../../../data/projectsData'
 
 const breakpointColumnsObj = {
     default: 3,
@@ -9,59 +11,11 @@ const breakpointColumnsObj = {
     640: 1
 }
 
-
-const projects = [
-    {
-        title: "Every creation is a Pearl",
-        image: "/images/projects/Pearl.png",
-        description: "A community driven platform for artists to showcase their work, connect with others, and explore the world of comic.",
-        tag: ["💻 Website", "Product Design", "Frontend Dev", "Procreate", "Multi-media"],
-        status: "In progress",
-        clickable: false,
-        href: null
-    },
-    {
-        title: "Undergraduate Researcher – Computational Neuroscience & Data Analytics",
-        image: "/images/projects/nsd.png",
-        description: "Exploring the Natural Scenes Dataset (NSD) to understand how the human brain processes natural images.",
-        tag: ["📊 Data", "Exploratory Data Analysis", "Natural Scenes Dataset (NSD)", "R", "Python", "SQL", "AWS"],
-        status: "View Project",
-        clickable: true,
-        href: "https://github.com/0CocoWang0/NSD_cogsci"
-    },
-    {
-        title: "Website for NORD consulting club at McGill",
-        image: "/images/projects/NORD.png",
-        description: "Leading the revamp of NORD Consulting’s website to enhance UI/UX, modernize the design, and improve SEO.",
-        tag: ["💻 Website", "Webflow", "Front-end Dev", "CMS", "SSR"],
-        status: "View Project",
-        clickable: true,
-        href: "https://msbn-consulting.webflow.io"
-    },
-    {
-        title: "ARIPPLE: When Arts Ripple - a novel solution for artists",
-        image: "/images/projects/aripple.png",
-        description: "Currently developing core features, including user authentication, artwork trading, and subscription-based monetization.",
-        tag: ["💻 Website", "🍎 Software", "Product Design", "Full-stack Dev", "React", "Next.js", "SSR"],
-        status: "In Progress",
-        clickable: true,
-        href: "https://aripple.vercel.app"
-    },
-    {
-        title: "Being an artist in the digital age",
-        image: "/images/projects/manga.png",
-        description: "Without boundary, I create stories and characters that transcend the limits of reality.",
-        tag: ["🎨 Design", "Procreate", "Multi-media", "Animation"],
-        status: "In progress",
-        clickable: false,
-        href: null
-    },
-
-
-
-]
+const projects = projectsData
 
 const Cards = () => {
+
+
     return (
         <Masonry
             breakpointCols={breakpointColumnsObj}
@@ -69,15 +23,7 @@ const Cards = () => {
             columnClassName="space-y-6"
         >
             {projects.map((project, index) => (
-                <a
-                    key={index}
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="break-inside-avoid mb-6 block cursor-pointer group"
-                    style={{ verticalAlign: "top" }}
-                >
-
+                <Link key={index} href={`/${project.slug}`} className="break-inside-avoid mb-6 block cursor-pointer group">
                     <div className="bg-[#000000] hover:bg-[#222121] active:bg-[#222121] focus:bg-[#222121] rounded-xl overflow-clip gap-2 grid pb-3">
                         <div className="h-[170px] overflow-clip">
                             <img
@@ -115,7 +61,8 @@ const Cards = () => {
                         </div>
                     </div>
 
-                </a>
+
+                </Link>
             ))}
         </Masonry>
 
