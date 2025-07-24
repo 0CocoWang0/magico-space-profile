@@ -13,7 +13,8 @@ const projects = [
     ],
     status: "In progress",
     clickable: true,
-    slug: "pearl",
+    slug: "projects-pearl",
+    link: "https://www.readpearl.com",
   },
   {
     title:
@@ -32,8 +33,8 @@ const projects = [
     ],
     status: "View Project",
     clickable: true,
-    slug: "nsd",
-    //href: "https://github.com/0CocoWang0/NSD_cogsci"
+    slug: "projects-nsd",
+    link: "https://github.com/0CocoWang0/NSD_cogsci",
   },
   {
     title: "Website for nord consulting club at McGill",
@@ -43,8 +44,8 @@ const projects = [
     tag: ["💻 Website", "Webflow", "Front-end Dev", "CMS", "SSR"],
     status: "View Project",
     clickable: true,
-    slug: "nord",
-    //href: "https://msbn-consulting.webflow.io"
+    slug: "projects-nord",
+    link: "https://msbn-consulting.webflow.io",
   },
   {
     title: "ARIPPLE: When Arts Ripple - a novel solution for artists",
@@ -62,8 +63,8 @@ const projects = [
     ],
     status: "In Progress",
     clickable: true,
-    slug: "aripple",
-    //href: "https://aripple.vercel.app"
+    slug: "projects-aripple",
+    link: "https://aripple.vercel.app",
   },
   {
     title: "Being an artist in the digital age",
@@ -73,8 +74,8 @@ const projects = [
     tag: ["🎨 Design", "Procreate", "Multi-media", "Animation"],
     status: "In progress",
     clickable: false,
-    slug: "manga",
-    //href: null
+    slug: "projects-manga",
+    link: null,
   },
 ];
 export default projects;

@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import Contact from "./Contact.jsx";
 import { motion, AnimatePresence } from "framer-motion";
 import useIsMobile from "../../hooks/useIsMobile";
-import useSectionInView from "../../hooks/useSectionInView";
+
 
 const PfpStack = () => {
     const isMobile = useIsMobile(640); // Use custom hook to determine if mobile
     const [time, setTime] = useState("");
     const [isNight, setIsNight] = useState(false);
-    const isHeroInView = useSectionInView("hero");
+
 
     // Update time every second
     useEffect(() => {

@@ -4,12 +4,14 @@ import "../../../globals.css";
 import Nav from "./Nav";
 import HeadProfile from "./HeadProfile";
 import { useSwipeScroll } from "../../../hooks/useSwipeScroll";
-import NotionSection from "./NotionSection";
-import Exp from "./Exp";
+import Exp from "./ExpLayout";
 import Topbar from "./Topbar";
 //import { useParams } from "next/navigation";
+import HeroSection from "../hero/HeroSection";
+import NotionSection from "./NotionSection";
 
-export default function DocsLayout({ slug }) {
+
+export default function DocsLayout() {
   const [isOpen, setIsOpen] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -17,6 +19,18 @@ export default function DocsLayout({ slug }) {
   const heroRef = useRef(null)
   const notionRef = useRef(null)
 
+  //conditional rendering based on active slug
+  const [activeSlug, setActiveSlug] = useState("hero");
+  const [isReady, setIsReady] = useState(false);
+  useEffect(() => {
+    const hash = window.location.hash?.replace("#", "");
+    if (hash) {
+      setActiveSlug(hash);
+    } else {
+      setActiveSlug("hero");
+    }
+    setIsReady(true);
+  }, []);
 
   useSwipeScroll({
     onSwipeUp: () => {
@@ -49,9 +63,9 @@ export default function DocsLayout({ slug }) {
   return (
     <>
       {/* notion layout starts here*/}
-      <div id="projects" className="flex h-screen snap-start">
+      <div className="flex h-screen snap-start">
 
-        <button onClick={() => setIsOpen((prev) => !prev)} className="z-101 fixed left-10 top-5 h-7 w-7 p-1 text-white rounded backdrop-blur-3xl
+        <button onClick={() => setIsOpen((prev) => !prev)} className="z-200 fixed left-10 top-5 h-7 w-7 p-1 text-white rounded backdrop-blur-3xl
                 bg-black/10  hover:bg-[#000] focus:bg-[#000] active:bg-[#000] active:scale-125">
           <img src="/images/nav/toggle.jpg" alt="Toggle Sidebar" className="h-full w-full object-contain" />
         </button>
@@ -62,7 +76,7 @@ export default function DocsLayout({ slug }) {
           transition-all duration-300 ease-in-out flex-shrink-0
         `}
           style={{
-            flexBasis: isOpen ? (isMobile ? '100%' : '20%') : '0px',
+            flexBasis: isOpen ? (isMobile ? '100%' : '248px') : '0px',
           }}
         >
           <div
@@ -70,18 +84,36 @@ export default function DocsLayout({ slug }) {
               }`}
           >
             <HeadProfile />
-            <Nav setIsOpen={setIsOpen} isMobile={isMobile} />
+            <Nav setIsOpen={setIsOpen} isMobile={isMobile} setActiveSlug={setActiveSlug} activeSlug={activeSlug} />
           </div>
         </aside>
 
         <main
           className={`
-              flex-1 md:p-3 bg-[#2A2929] transition-all duration-500 w-full`}
+            flex-1 bg-[#2A2929] transition-all duration-500 w-full`}
         >
+
           <div className="rounded-2xl bg-[#191919] overflow-auto h-full w-full">
-            {slug && <Topbar slug={slug} />}
-            {slug ? <Exp slug={slug} /> : <NotionSection />}
+            {isReady && (
+              activeSlug === "projects" ? (
+                <NotionSection id="projects" slug={activeSlug} setActiveSlug={setActiveSlug} />
+              ) : (
+                <>
+                  {activeSlug === "hero" ? (
+                    <HeroSection id="hero" />
+                  ) : (
+                    <>
+                      <Topbar slug={activeSlug} setActiveSlug={setActiveSlug} />
+                      <Exp slug={activeSlug} />
+                    </>
+                  )}
+                </>
+              )
+            )}
           </div>
+
+
+
         </main>
 
 

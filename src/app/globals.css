@@ -69,3 +69,17 @@ button {
   border-radius: 1px !important;
   background-color: white !important;
 }
+
+.notion-content {
+  padding: 5vw;
+  color: var(--foreground);
+}
+.notion-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.notion-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
