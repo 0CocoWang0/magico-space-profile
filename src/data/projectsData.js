@@ -1,6 +1,7 @@
 const projects = [
   {
-    title: "Every creation is a pearl",
+    bait: "Every Creation is a Pearl",
+    title: "PEARL",
     image: "/images/projects/pearl.png",
     description:
       "A community driven platform for artists to showcase their work, connect with others, and explore the world of comic.",
@@ -11,14 +12,24 @@ const projects = [
       "Procreate",
       "Multi-media",
     ],
-    status: "In progress",
+    status: "View Project",
     clickable: true,
     slug: "projects-pearl",
-    link: "https://www.readpearl.com",
+    links: [
+      {
+        href: "https://www.readpearl.com",
+        label: "View Website (In Progress)",
+      },
+    ],
+
+    location: "",
+    role: "UI/UX Designer, Frontend Developer",
+    tools: "Figma, Next.js, Supabase",
+    timeline: "Ongoing (2025-Present)",
   },
   {
-    title:
-      "Undergraduate Researcher – Computational Neuroscience & Data Analytics",
+    bait: "Undergraduate Researcher – Computational Neuroscience & Data Analytics",
+    title: "REPRESENTATIONAL TOPOLOGY ANALYSIS",
     image: "/images/projects/nsd.png",
     description:
       "Exploring the Natural Scenes Dataset (NSD) to understand how the human brain processes natural images.",
@@ -34,10 +45,25 @@ const projects = [
     status: "View Project",
     clickable: true,
     slug: "projects-nsd",
-    link: "https://github.com/0CocoWang0/NSD_cogsci",
+    links: [
+      {
+        href: "https://github.com/0CocoWang0/NSD_cogsci",
+        label: "View GitHub",
+      },
+      {
+        href: "https://cran.r-project.org/web/packages/TDApplied/vignettes/ML_and_Inference.html",
+        label: "View Tech Package",
+      },
+    ],
+
+    location: "McGill University Health Center, Montreal",
+    role: "Data Analytics Research Assistant",
+    tools: "Python, R, Bash, Azure",
+    timeline: "2025.01-2025.06",
   },
   {
-    title: "Website for nord consulting club at McGill",
+    bait: "Website for nord consulting club at McGill",
+    title: "NORD CONSULTING",
     image: "/images/projects/nord.png",
     description:
       "Leading the revamp of nord Consulting’s website to enhance UI/UX, modernize the design, and improve SEO.",
@@ -45,10 +71,21 @@ const projects = [
     status: "View Project",
     clickable: true,
     slug: "projects-nord",
-    link: "https://msbn-consulting.webflow.io",
+    links: [
+      {
+        href: "https://msbn-consulting.webflow.io",
+        label: "View Website (In Progress)",
+      },
+    ],
+
+    location: "McGill University, Montreal",
+    role: "Website Deisgn & Development Deirector",
+    tools: "Figma, Webflow, React, CMS",
+    timeline: "Ongoing (2024-Present)",
   },
   {
-    title: "ARIPPLE: When Arts Ripple - a novel solution for artists",
+    bait: "When Arts Ripple",
+    title: "ARIPPLE",
     image: "/images/projects/aripple.png",
     description:
       "Currently developing core features, including user authentication, artwork trading, and subscription-based monetization.",
@@ -61,21 +98,49 @@ const projects = [
       "Next.js",
       "SSR",
     ],
-    status: "In Progress",
+    status: "View Project",
     clickable: true,
     slug: "projects-aripple",
-    link: "https://aripple.vercel.app",
+    links: [
+      {
+        href: "https://aripple.vercel.app",
+        label: "View Website (In Progress)",
+      },
+      {
+        href: "https://github.com/0CocoWang0/aripple",
+        label: "View GitHub",
+      },
+    ],
+
+    location: "",
+    role: "Product Designer",
+    tools: "Procreate, Sketch, Next.js, Supabase",
+    timeline: "Ongoing (2025-Present)",
   },
   {
-    title: "Being an artist in the digital age",
+    bait: "Being an artist in the digital age",
+    title: "BICULTURAL ARTISTS",
     image: "/images/projects/manga.png",
     description:
       "Without boundary, I create stories and characters that transcend the limits of reality.",
     tag: ["🎨 Design", "Procreate", "Multi-media", "Animation"],
-    status: "In progress",
+    status: "Locked",
     clickable: false,
     slug: "projects-manga",
-    link: null,
+    links: [
+      {
+        href: "null",
+        label: "View Website 1",
+      },
+      {
+        href: "null",
+        label: "View Website 2",
+      },
+    ],
+    location: "",
+    role: "",
+    tools: "",
+    timeline: "",
   },
 ];
 export default projects;

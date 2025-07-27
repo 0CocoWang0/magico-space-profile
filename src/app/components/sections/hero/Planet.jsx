@@ -59,7 +59,7 @@ const Planet = ({ src = "/images/planet.svg", size = 100, style = {} }) => {
             ref={planetRef}
             src={src}
             alt="Floating Planet"
-            className={`absolute lg:left-1/2 left-[70%] top-[70%] -translate-x-1/2`}
+
             style={{ width: size, height: size, ...style }}
             draggable={false}
         />

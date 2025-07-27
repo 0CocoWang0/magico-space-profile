@@ -8,12 +8,19 @@ export default function Topbar({ slug, setActiveSlug }) {
     if (!project) return null;
 
     return (
-        <div className="flex items-center gap-3 px-4 py-3 border-b border-neutral-800 bg-[#1E1E1E] sticky top-0 z-50">
+        <div className="flex items-center gap-3 px-4 py-3 border-b sticky top-0 z-50
+                backdrop-blur-lg
+                bg-[#191919]/50
+                border-white/20
+                rounded-t-xl
+                shadow-[0_4px_30px_rgba(0,0,0,0.1)]
+                transition-all duration-300
+        ">
             <button onClick={() => {
                 setActiveSlug("projects")
                 window.location.hash = "#projects";
             }}
-                className="hover:opacity-80"
+                className="hover:opacity-80 ml-10"
             >
                 <ArrowLeft className="w-5 h-5 text-neutral-300" />
             </button>
@@ -26,7 +33,7 @@ export default function Topbar({ slug, setActiveSlug }) {
                 />
             )}
 
-            <h1 className="text-lg font-medium text-white">{project.title}</h1>
+            <h1 className="text-lg font-medium text-white">{project.bait}</h1>
         </div>
     )
 }

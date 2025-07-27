@@ -9,13 +9,13 @@ const Nav = ({ setIsOpen, isMobile, setActiveSlug, activeSlug }) => {
     ];
     console.log("activeSlug", activeSlug);
     return (
-        <nav className="flex flex-col gap-4 text-sm text-[#727272] align-left">
+        <nav className="flex flex-col gap-2 text-sm text-[#727272] align-left">
             {sections.map(({ label, href, id }) => (
                 <button key={label}>
                     <a
 
                         href={href}
-                        className={`transition-all flex ${activeSlug.startsWith(id) ? "text-white font-semibold" : "hover:text-white"
+                        className={`transition-all duration-300 p-1 px-5 rounded-md flex ${activeSlug.startsWith(id) ? "text-white bg-black/20 font-semibold" : "hover:text-white"
                             }`}
                         onClick={() => {
                             if (isMobile) setIsOpen(false);

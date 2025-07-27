@@ -4,6 +4,7 @@ import WiggleElement from '../../shared/WiggleElement'
 import Masonry from 'react-masonry-css'
 import projectsData from '../../../../data/projectsData'
 import Topbar from './Topbar'
+import TagList from '../../shared/TagList'
 
 const breakpointColumnsObj = {
     default: 3,
@@ -40,18 +41,11 @@ const NotionSection = ({ slug, setActiveSlug }) => {
                                 />
                             </div>
                             <div className="px-5">
-                                <h3 className="text-white text-sm mb-2">{project.title}</h3>
+                                <h3 className="text-white text-sm mb-2">{project.bait}</h3>
                                 <p className="text-[#727272] text-[10px]">{project.description}</p>
                             </div>
-                            <div className="flex flex-wrap gap-2 px-5">
-                                {project.tag.map((tag, index) => (
-                                    <WiggleElement key={index}>
-                                        <span className="bg-[#2A2929] text-white text-[10px] p-1 rounded-sm">
-                                            {tag}
-                                        </span>
-                                    </WiggleElement>
-                                ))}
-                            </div>
+                            <TagList project={project} size={"[10px]"} />
+
                             <div className="place-self-end px-5">
                                 <span
                                     className={`text-[10px] inline-flex items-center justify-self-center gap-2 pointer-events-auto font-semibold rounded-lg px-2 py-2 ${project.clickable

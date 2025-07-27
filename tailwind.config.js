@@ -1,13 +1,15 @@
 module.exports = {
-    theme: {
-      extend: {},
-      screens: {
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1280px",
-      },
+  theme: {
+    extend: {},
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
     },
-    plugins: [require('tailwind-scrollbar-hide')]
-  };
-
+  },
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("tailwind-scrollbar-hide"),
+  ],
+};

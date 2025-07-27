@@ -32,7 +32,7 @@ const PfpStack = () => {
     return (
         <nav
             className={`
-                hero-nav gap-2 p-1 sm:px-4 sm:gap-4 top-4 z-110
+                hero-nav gap-2 p-1 sm:px-4 sm:gap-4 top-4 z-110 sm:min-w-[530px]
                 backdrop-blur-3xl
                 bg-white/10
                 border border-white/20
@@ -42,7 +42,8 @@ const PfpStack = () => {
                 flex
             
             `}
-        >            <img
+        >
+            <img
                 src="/images/nav/profile-fun.png"
                 alt="Profile"
                 className="w-[40px] h-[40px] border-[1px] border-black rounded-[10px]"
@@ -50,9 +51,9 @@ const PfpStack = () => {
             <button>
                 {
                     isMobile ? (
-                        <a href="#hero">Keming Wang</a>
+                        <a href="#hero" className="text-sm">Keming Wang</a>
                     ) : (
-                        <a href="#hero">王可名 · Keming Wang</a>
+                        <a href="#hero" className="text-sm">王可名 · Keming Wang</a>
                     )
                 }
             </button>

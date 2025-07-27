@@ -8,6 +8,12 @@ body,
 :root {
   --background: #2a2929;
   --foreground: #ffffff;
+  --vh: 100dvh;
+}
+@media (max-width: 768px) {
+  :root {
+    --vh: 100vh;
+  }
 }
 html,
 body {
@@ -18,7 +24,7 @@ body {
   align-items: center;
   overflow-x: hidden;
   width: 100%;
-  height: 100%;
+  height: 100svh;
   position: fixed;
   overscroll-behavior: none;
 }
@@ -68,18 +74,4 @@ button {
   height: 20px !important;
   border-radius: 1px !important;
   background-color: white !important;
-}
-
-.notion-content {
-  padding: 5vw;
-  color: var(--foreground);
-}
-.notion-content h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.notion-content p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
 }

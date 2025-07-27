@@ -9,11 +9,5 @@ export const viewport = {
 };
 
 export default function Home() {
-  return (
-    <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
-      <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
-        <DocsLayout />
-      </div>
-    </div>
-  );
+  return <DocsLayout />;
 }

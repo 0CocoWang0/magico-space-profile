@@ -8,7 +8,7 @@ import Contact from "../../shared/Contact";
 import PfpStack from "../../shared/PfpStack";
 
 
-export default function HeroWithWave() {
+export default function HeroWithWave({ setActiveSlug }) {
     const isMobile = useIsMobile(640); // Use custom hook to determine if mobile
 
     const pathRef = useRef(null)
@@ -48,23 +48,43 @@ export default function HeroWithWave() {
     }, [])
 
     return (
-        <section id="hero" className="z-105 snap-start relative md:p-30 flex flex-col md:h-screen h-screen min-h-[700px] bg-[#0f0f0f] text-white items-center justify-center">
+        <section id="hero" className="z-105 p-10 snap-start relative flex flex-col md:h-screen h-screen min-h-[700px] bg-[#0f0f0f] text-white py-30 justify-center">
 
-            <div className="mb-15 sticky top-5 z-50">
+            <div className="sm:mb-15 sticky top-5 z-50">
                 <PfpStack />
+
                 {isMobile ? (
-                    <div className="mt-5 flex justify-center"><Contact /></div>
+                    <div>
+                        <div className="my-5 flex justify-center"><Contact /></div>
+                    </div>
                 ) : (
                     <></>
                 )}
             </div>
-            <h1 className="z-10 mb-30 sm:text-5xl text-3xl md:text-center font-bold">Systems thinker with an interdisciplinary background
-                in <span className="">Cognitive and Computer Science.</span><br />
-                I craft creative solutions <br /> that are <span className="text-green-400">easy to follow, hard to forget.</span></h1>
+            <div className="flex items-center justify-center">
+                <h1 className="sm:max-w-[70vw] z-10 sm:text-5xl md:text-center text-3xl font-bold">Systems thinker with an interdisciplinary background
+                    in Cognitive and Computer Science. I craft creative solutions that are <span className="text-green-400">easy to follow, hard to forget.</span>
+                </h1>
+            </div>
 
-            <Planet
-                size={120}
-            />
+            <div className="flex flex-col mt-5 justify-center items-center">
+                <button className="group transition-all z-10 mt-5 w-fit" onClick={() => setActiveSlug("projects")}>
+                    <span
+                        className="text-sm inline-flex items-center gap-2 pointer-events-auto font-semibold rounded-lg p-2 text-white group-hover:underline active:underline decoration-[#91EAE4] decoration-wavy"
+                    >
+                        View my projects
+                        <img
+                            src="/images/nav/arrowdown.jpg"
+                            className="h-1 -rotate-90 transform transition-transform duration-200 group-hover:translate-x-[3px]"
+                        />
+                    </span>
+                </button>
+                <Planet
+                    className="sm:w-120"
+                />
+            </div>
+            {/* 
+            
             <svg
                 className="absolute bottom-0 left-0 w-full h-[200px] z-0"
                 viewBox="0 0 1000 400"
@@ -72,6 +92,7 @@ export default function HeroWithWave() {
             >
                 <path ref={pathRef} fill="#2A2929" d="" />
             </svg>
+            */}
 
         </section>
     )

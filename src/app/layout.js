@@ -60,10 +60,9 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="cursor-none h-full ">
+      <body className="cursor-none overflow-x-hidden">
         <Cursor />
-        <header className="absolute p-3  items-center z-50 flex w-screen"></header>
-        <main className=" cursor-none scroll-smooth">{children}</main>
+        <main className="cursor-none scroll-smooth">{children}</main>
         <Analytics />
         <SpeedInsights />
       </body>
