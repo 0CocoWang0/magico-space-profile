@@ -3,6 +3,7 @@ html,
 body,
 * {
   cursor: none !important;
+  /* outline: 1px solid red; */
 }
 
 :root {
@@ -13,6 +14,9 @@ body,
 @media (max-width: 768px) {
   :root {
     --vh: 100vh;
+  }
+  .no-hover\:opacity-0 {
+    opacity: 0 !important;
   }
 }
 html,

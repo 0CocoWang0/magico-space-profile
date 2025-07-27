@@ -14,7 +14,7 @@ const projects = [
     ],
     status: "View Project",
     clickable: true,
-    slug: "projects-pearl",
+    slug: "pearl",
     links: [
       {
         href: "https://www.readpearl.com",
@@ -44,7 +44,7 @@ const projects = [
     ],
     status: "View Project",
     clickable: true,
-    slug: "projects-nsd",
+    slug: "nsd",
     links: [
       {
         href: "https://github.com/0CocoWang0/NSD_cogsci",
@@ -70,7 +70,7 @@ const projects = [
     tag: ["💻 Website", "Webflow", "Front-end Dev", "CMS", "SSR"],
     status: "View Project",
     clickable: true,
-    slug: "projects-nord",
+    slug: "nord",
     links: [
       {
         href: "https://msbn-consulting.webflow.io",
@@ -100,7 +100,7 @@ const projects = [
     ],
     status: "View Project",
     clickable: true,
-    slug: "projects-aripple",
+    slug: "aripple",
     links: [
       {
         href: "https://aripple.vercel.app",
@@ -126,7 +126,7 @@ const projects = [
     tag: ["🎨 Design", "Procreate", "Multi-media", "Animation"],
     status: "Locked",
     clickable: false,
-    slug: "projects-manga",
+    slug: "manga",
     links: [
       {
         href: "null",

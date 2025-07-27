@@ -1,30 +1,45 @@
 "use client";
-import React, { useEffect } from 'react';
+import React from 'react';
+import { pageTree } from '../../../../data/pageHierarchy';
+import Planet from '../hero/Planet';
 
 const Nav = ({ setIsOpen, isMobile, setActiveSlug, activeSlug }) => {
-    const sections = [
-        { label: "Home", href: "/#hero", id: "hero" },
-        { label: "Projects", href: "/#projects", id: "projects" },
-        //{ label: "About Me", href: "/#aboutme", id: "aboutme" },
-    ];
-    console.log("activeSlug", activeSlug);
+    //get all top-level pages
+    const sections = Object.entries(pageTree).filter(
+        ([_, value]) => value.parent === null
+    )
+    /* sections = [
+        ['home', { title: 'Home', parent: null, image: '' }],
+        ['projects', { title: 'Projects', parent: null, image: '/some/image.jpg' }]
+    ] */
+
+    let current = activeSlug
+    while (current && pageTree[current]?.parent) {
+        current = pageTree[current].parent;
+    }
+
     return (
         <nav className="flex flex-col gap-2 text-sm text-[#727272] align-left">
-            {sections.map(({ label, href, id }) => (
-                <button key={label}>
-                    <a
+            {sections.map(([id, item]) => (
+                <button
+                    key={id}
+                    onClick={() => {
+                        if (isMobile) setIsOpen(false);
+                        setActiveSlug(id);
+                        window.location.hash = `#${id}`;
+                    }}
+                    className={`transition-all duration-300 p-1 px-5 rounded-md inline-flex gap-2 
+                            ${current === id
+                            ? "text-white bg-black/20 font-semibold"
+                            : "hover:text-white"
+                        }`}
+                >
+                    {item.image ?
 
-                        href={href}
-                        className={`transition-all duration-300 p-1 px-5 rounded-md flex ${activeSlug.startsWith(id) ? "text-white bg-black/20 font-semibold" : "hover:text-white"
-                            }`}
-                        onClick={() => {
-                            if (isMobile) setIsOpen(false);
-                            setActiveSlug(id);
-                        }}
-                    >
-
-                        {label}
-                    </a>
+                        <img src={item.image} className='w-5 h-5 object-cover rounded-sm' /> :
+                        <img src="/images/icon1.png" className='w-5 h-5 object-cover' />
+                    }
+                    {item.title}
                 </button>
             ))}
         </nav>

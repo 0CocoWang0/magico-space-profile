@@ -32,7 +32,7 @@ const PfpStack = () => {
     return (
         <nav
             className={`
-                hero-nav gap-2 p-1 sm:px-4 sm:gap-4 top-4 z-110 sm:min-w-[530px]
+                hero-nav gap-2 p-1 sm:px-4 sm:gap-4 z-110 sm:min-w-[530px]
                 backdrop-blur-3xl
                 bg-white/10
                 border border-white/20
@@ -63,7 +63,7 @@ const PfpStack = () => {
                 <span>Montreal, CA</span>
             </span>
 
-            <span className="flex items-center text-sm relative h-[15px] overflow-clip">
+            <span className="flex items-center text-sm relative h-[15px] pr-2 overflow-clip">
                 {/* animate clock page-turn */}
                 <AnimatePresence mode="wait">
                     <motion.img

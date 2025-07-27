@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-import WiggleElement from '../../shared/WiggleElement'
 import Masonry from 'react-masonry-css'
 import projectsData from '../../../../data/projectsData'
 import Topbar from './Topbar'
@@ -22,7 +21,6 @@ const NotionSection = ({ slug, setActiveSlug }) => {
 
     return (
         <div>
-            <Topbar slug={slug} setActiveSlug={setActiveSlug} />
             <Masonry
                 breakpointCols={breakpointColumnsObj}
                 className="flex gap-6 p-5"

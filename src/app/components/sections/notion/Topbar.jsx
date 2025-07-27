@@ -1,39 +1,56 @@
 'use client'
 
-import { ArrowLeft } from 'lucide-react'
-import projectsData from '../../../../data/projectsData'
+import { pageTree } from '../../../../data/pageHierarchy'
 
-export default function Topbar({ slug, setActiveSlug }) {
-    const project = projectsData.find((p) => p.slug === slug)
-    if (!project) return null;
+export default function Topbar({ slug, setActiveSlug, isOpen }) {
+    function getBreadcrumbPath(slug, tree) {
+        const path = [];
+        let current = slug;
+
+        while (current) {
+            const page = tree[current];
+            if (!page) break;
+            path.unshift({ slug: current, title: page.title, image: page.image });
+            current = page.parent;
+        }
+
+        return path; // e.g. [{slug: "projects", title: "Projects"}, {slug: "pearl", title: "Pearl"}]
+    }
+    const path = getBreadcrumbPath(slug, pageTree)
 
     return (
-        <div className="flex items-center gap-3 px-4 py-3 border-b sticky top-0 z-50
+        <div className={`${isOpen ? "pl-2" : "pl-10"} flex items-center gap-3 px-4 py-3 border-b sticky top-0 z-199
                 backdrop-blur-lg
                 bg-[#191919]/50
                 border-white/20
                 rounded-t-xl
                 shadow-[0_4px_30px_rgba(0,0,0,0.1)]
-                transition-all duration-300
-        ">
-            <button onClick={() => {
-                setActiveSlug("projects")
-                window.location.hash = "#projects";
-            }}
-                className="hover:opacity-80 ml-10"
-            >
-                <ArrowLeft className="w-5 h-5 text-neutral-300" />
-            </button>
+                transition-all duration-300`}
+        >
+            {path.map((item, index) => (
+                <div key={item.slug} className='flex items-center gap-2'>
+                    {index > 0 && <span className="text-green-300">/</span>}
+                    {index < path.length - 1 ? (
+                        <button
+                            onClick={() => {
+                                setActiveSlug(item.slug);
+                                window.location.hash = `#${item.slug}`;
+                            }}
+                            className='items-center inline-flex gap-1 px-1 rounded-md hover:bg-[#2A2929] active:bg-[#2A2929]'
+                        >
+                            <img src={item.image} className='h-5 w-5 object-cover rounded-sm' />
+                            {item.title}
+                        </button>
+                    ) : (
+                        <span className='items-center inline-flex gap-1 px-1'>
+                            <img src={item.image} className='h-5 w-5 object-cover rounded-sm' />
+                            {item.title}
+                        </span>
+                    )}
+                </div>
+            ))}
 
-            {project.image && (
-                <img
-                    src={project.image}
-                    alt={`${project.title} icon`}
-                    className="w-6 h-6 object-contain rounded-sm"
-                />
-            )}
 
-            <h1 className="text-lg font-medium text-white">{project.bait}</h1>
         </div>
     )
 }

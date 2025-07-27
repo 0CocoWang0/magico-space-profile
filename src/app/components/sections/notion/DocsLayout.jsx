@@ -8,7 +8,6 @@ import Exp from "./ExpLayout";
 import Topbar from "./Topbar";
 import HeroSection from "../hero/HeroSection";
 import NotionSection from "./NotionSection";
-import { useMobileViewportHeight } from "../../../hooks/useMobileViewportHeight";
 import { AnimatePresence, motion } from "framer-motion";
 
 
@@ -21,20 +20,21 @@ export default function DocsLayout() {
   const notionRef = useRef(null)
 
 
-  //dynamically calculate height of phone browser
-  useMobileViewportHeight()
-
   //conditional rendering based on active slug
   const [activeSlug, setActiveSlug] = useState("hero");
   const [isReady, setIsReady] = useState(false);
   useEffect(() => {
-    const hash = window.location.hash?.replace("#", "");
-    if (hash) {
-      setActiveSlug(hash);
-    } else {
-      setActiveSlug("hero");
+    function handleHashChange() {
+      const hash = window.location.hash?.replace("#", "");
+      setActiveSlug(hash || "hero");
     }
+    // run on mount to set initial slug
+    handleHashChange();
+    // Listen to hash changes (back/forward navigation)
+    window.addEventListener("hashchange", handleHashChange);
     setIsReady(true);
+    // Cleanup listener on unmount
+    return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
   useSwipeScroll({
@@ -72,7 +72,7 @@ export default function DocsLayout() {
       <div className="flex h-[100dvh] relative">
 
         <button onClick={() => setIsOpen((prev) => !prev)}
-          className={`z-200 absolute top-3 h-7 w-7 p-1 text-white rounded backdrop-blur-3xl transition-all duration-300
+          className={`z-200 absolute top-2 h-7 w-7 p-1 text-white rounded backdrop-blur-3xl transition-all duration-300
                 bg-black/10  hover:bg-[#000] focus:bg-[#000] active:bg-[#000] active:scale-125
                  ${isOpen ? (isMobile ? "right-4" : "left-[210px]") : "left-2"}`}
         >
@@ -99,10 +99,13 @@ export default function DocsLayout() {
 
         <main
           className={`
-          flex-1 bg-[#2A2929] transition-all duration-500 w-full`}
+          flex-1 bg-[#2A2929] transition-all duration-500 h-full w-full overflow-auto rounded-t-xl`}
         >
 
-          <div className="bg-[#191919] rounded-t-xl overflow-auto h-full w-full">
+          <div className="bg-[#191919] rounded-t-xl w-full relative">
+            {activeSlug !== "hero" && (
+              <Topbar slug={activeSlug} setActiveSlug={setActiveSlug} isOpen={isOpen} />
+            )}
             <AnimatePresence mode="wait">
               {isReady && (
                 <motion.div
@@ -112,26 +115,19 @@ export default function DocsLayout() {
                   exit={{ opactiy: 0 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
+
                   {activeSlug === "projects" ? (
                     <NotionSection id="projects" slug={activeSlug} setActiveSlug={setActiveSlug} />
+                  ) : activeSlug === "hero" ? (
+                    <HeroSection id="hero" setActiveSlug={setActiveSlug} />
                   ) : (
-                    <>
-                      {activeSlug === "hero" ? (
-                        <HeroSection id="hero" setActiveSlug={setActiveSlug} />
-                      ) : (
-                        <>
-                          <Topbar slug={activeSlug} setActiveSlug={setActiveSlug} />
-                          <Exp slug={activeSlug} />
-                        </>
-                      )}
-                    </>
+                    <Exp slug={activeSlug} />
                   )}
+
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
-
-
 
         </main>
 
