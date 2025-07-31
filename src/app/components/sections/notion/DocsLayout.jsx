@@ -72,8 +72,8 @@ export default function DocsLayout() {
       <div className="flex h-[100dvh] relative">
 
         <button onClick={() => setIsOpen((prev) => !prev)}
-          className={`z-200 absolute top-2 h-7 w-7 p-1 text-white rounded backdrop-blur-3xl transition-all duration-300
-                bg-black/10  hover:bg-[#000] focus:bg-[#000] active:bg-[#000] active:scale-125
+          className={`z-200 absolute top-2 h-7 w-7 p-1 text-white rounded hover:backdrop-blur-3xl transition-all duration-300
+                hover:bg-[#000] focus:bg-[#000] active:bg-[#000] active:scale-125
                  ${isOpen ? (isMobile ? "right-4" : "left-[210px]") : "left-2"}`}
         >
           <img src="/images/nav/toggle.jpg" alt="Toggle Sidebar" className="h-full w-full object-contain" />
@@ -99,10 +99,10 @@ export default function DocsLayout() {
 
         <main
           className={`
-          flex-1 bg-[#2A2929] transition-all duration-500 h-full w-full overflow-auto rounded-t-xl`}
+          flex-1 bg-[#191919] transition-all duration-500 h-full w-full overflow-auto rounded-t-xl`}
         >
 
-          <div className="bg-[#191919] rounded-t-xl w-full relative">
+          <div className="rounded-t-xl w-full relative">
             {activeSlug !== "hero" && (
               <Topbar slug={activeSlug} setActiveSlug={setActiveSlug} isOpen={isOpen} />
             )}

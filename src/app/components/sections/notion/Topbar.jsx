@@ -23,7 +23,7 @@ export default function Topbar({ slug, setActiveSlug, isOpen }) {
                 backdrop-blur-lg
                 bg-[#191919]/50
                 border-white/20
-                rounded-t-xl
+                rounded-tl-xl
                 shadow-[0_4px_30px_rgba(0,0,0,0.1)]
                 transition-all duration-300`}
         >

@@ -88,7 +88,7 @@ const projects = [
     title: "ARIPPLE",
     image: "/images/projects/aripple.png",
     description:
-      "Currently developing core features, including user authentication, artwork trading, and subscription-based monetization.",
+      "Currently leading both design and development—refining the design system for scalability and consistency, and building core user flows such as authentication, onboarding, and content publishing.",
     tag: [
       "💻 Website",
       "🍎 Software",
@@ -104,7 +104,7 @@ const projects = [
     links: [
       {
         href: "https://aripple.vercel.app",
-        label: "View Website (In Progress)",
+        label: "View Website (WIP)",
       },
       {
         href: "https://github.com/0CocoWang0/aripple",
@@ -113,7 +113,7 @@ const projects = [
     ],
 
     location: "",
-    role: "Product Designer",
+    role: "Product Designer & Developer",
     tools: "Procreate, Sketch, Next.js, Supabase",
     timeline: "Ongoing (2025-Present)",
   },

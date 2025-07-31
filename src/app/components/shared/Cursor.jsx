@@ -100,7 +100,7 @@ const Cursor = () => {
             />
             <div
                 ref={dotRef}
-                className="fixed -top-2 -left-3 bg-green-300 z-[901] pointer-events-none mix-blend-difference transition-all duration-300 ease-out"
+                className="fixed -top-2 -left-2 bg-green-300 z-[901] pointer-events-none mix-blend-difference transition-all duration-300 ease-out"
                 style={{ transform: "translate3d(0, 0, 0)" }}
             />
         </>

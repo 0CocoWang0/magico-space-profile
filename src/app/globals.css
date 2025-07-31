@@ -15,8 +15,8 @@ body,
   :root {
     --vh: 100vh;
   }
-  .no-hover\:opacity-0 {
-    opacity: 0 !important;
+  .no-hover\:opacity-100 {
+    opacity: 100 !important;
   }
 }
 html,
