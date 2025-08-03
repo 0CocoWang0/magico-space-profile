@@ -40,7 +40,6 @@ const PfpStack = () => {
                 shadow-[0_4px_30px_rgba(0,0,0,0.1)]
                 transition-all duration-300
                 flex
-            
             `}
         >
             <img
@@ -93,7 +92,6 @@ const PfpStack = () => {
             {
                 isMobile ? (
                     <>
-
                     </>
                 ) : (
                     <Contact />

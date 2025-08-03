@@ -3,7 +3,8 @@ import useIsMobile from "../../../hooks/useIsMobile";
 import Contact from "../../shared/Contact";
 import PfpStack from "../../shared/PfpStack";
 import Recommend from "../hero/Recommend";
-import Planet from "./Planet"
+import PokeWindow from "./PokeWindow"
+import FloatingWrapper from "../../shared/FloatingWrapper"
 
 
 export default function HeroWithWave({ setActiveSlug }) {
@@ -12,40 +13,82 @@ export default function HeroWithWave({ setActiveSlug }) {
         {
             slug: "projects",
             text: "View My Projects",
-            imgURL: ""
+            imgURL: "/images/nav/goout.png"
         },
         {
             slug: "aripple",
             text: "ARIPPLE",
             imgURL: "/images/projects/aripple.png"
         },
+        {
+            slug: "nsd",
+            text: "NSD",
+            imgURL: "/images/projects/nsd.png"
+        },
+
 
 
     ]
 
     return (
-        <section id="hero" className="z-105 p-10 sm:px-20 relative h-[100dvh] bg-[#0f0f0f] text-white">
+        <section id="hero" className="z-105 relative h-[100dvh] bg-[#0f0f0f] text-white">
             <div className=" flex flex-col h-full relative items-center">
-                <div className="sm:mb-15 sm:pt-10 z-50">
+                <div className="sm:mb-15 pt-1 sm:pt-10 z-50">
                     <PfpStack />
                     {isMobile ? (
                         <div>
-                            <div className="my-5 flex justify-center"><Contact /></div>
+                            <div className="mt-5 flex justify-center"><Contact /></div>
                         </div>
                     ) : (
                         <></>
                     )}
                 </div>
-                <div className="flex items-center justify-center">
-                    <h1 className="sm:max-w-[70vw] z-10 sm:text-5xl text-3xl font-bold">Systems thinker with an interdisciplinary background
-                        in Cognitive and Computer Science. I craft creative solutions that are <span className="text-green-400">easy to follow, hard to forget.</span>
-                    </h1>
+
+                <div className="w-full h-1/3 sm:px-10">
+                    <FloatingWrapper floatSpeed={0.3}>
+                        {/* For medium and larger screens */}
+                        <img
+                            className="w-full h-full object-contain hidden lg:block"
+                            src="/images/heroImg/bigname.png"
+                            alt="Hero Large"
+                            draggable={false}
+                        />
+
+                        {/* For small and medium screens */}
+                        <img
+                            className="w-full h-full object-cover block lg:hidden"
+                            src="/images/heroImg/bigname2.png"
+                            alt="Hero Small"
+                            draggable={false}
+                        />
+                    </FloatingWrapper>
                 </div>
-                <div className="mt-10 hidden md:block">
-                    <Planet />
-                </div>
-                <div className="mt-10 sm:w-fit w-full absolute bottom-5 flex justify-center items-center overflow-hidden">
-                    <Recommend recommendItems={recommendItems} setActiveSlug={setActiveSlug} />
+                <div className="px-5 flex flex-col items-center justify-center md:w-[45vw]">
+                    <div className="w-full flex justify-start items-center text-center gap-2 sm:gap-5 text-sm sm:mb-10 mb-2.5">
+                        <div className="rounded-2xl bg-green-400 text-black px-5 py-1">Systems Thinker</div>
+                        <div className="rounded-2xl bg-[#1d1c1c] text-white px-5 py-1">Web Dev</div>
+                        <div className="rounded-2xl bg-[#1d1c1c] text-white px-5 py-1">Product Designer</div>
+                        <div className="rounded-2xl bg-[#1d1c1c] text-white h-full items-center flex px-5 py-1">Artist</div>
+
+                    </div>
+
+                    <div className="w-full">
+                        <h1 className="sm:text-2xl text-lg"> I craft solutions that are <span className="decoration-green-400 underline decoration-dashed"> easy to follow, hard to forget.</span></h1>
+                    </div>
+
+                    <div className="grid w-full grid-cols-3 gap-10 mt-2.5 sm:mt-10">
+                        <div className="col-span-3 md:col-span-2">
+                            <Recommend recommendItems={recommendItems} setActiveSlug={setActiveSlug} />
+                        </div>
+                        <div className="hidden md:flex md:flex-col md:col-span-1">
+                            <p className="text-[10px] text-[#979797] mb-2">Poke Me!</p>
+                            <div className="h-full w-full flex justify-center bg-[#2A2929]/20 rounded-2xl">
+                                <PokeWindow />
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
 
 

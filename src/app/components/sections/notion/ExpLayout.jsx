@@ -68,7 +68,7 @@ export default function Exp({ slug }) {
                     draggable={false}
                     className="w-full h-80 object-cover object-center sticky top-0 z-10"
                 />
-                <div className="flex flex-col sm:flex-row p-[5vw] gap-10 relative z-20 bg-[#191919] h-full">
+                <div className="flex flex-col sm:flex-row p-[5vw] gap-10 relative z-20 bg-[#0f0f0f] h-full">
 
                     {/* Left row */}
                     <div className='sm:w-1/3'>

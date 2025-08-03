@@ -1,17 +1,17 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import React from 'react'
 
 const emojis = ['✨', '🎨', '🎮', '🌍', '😎', '👻'];
 const ReactionButton = () => {
     const [reactions, setReactions] = useState({
-        '✨': 0, 
-        '🎨': 0, 
-        '🎮': 0, 
-        '🌏': 0, 
-        '😎': 0, 
+        '✨': 0,
+        '🎨': 0,
+        '🎮': 0,
+        '🌏': 0,
+        '😎': 0,
         '👻': 0,
     });
-    
+
 
     const [selected, setSelected] = useState(null);
 
@@ -25,13 +25,13 @@ const ReactionButton = () => {
                 },
                 body: JSON.stringify({ emoji }),
             })
-                .then (res => res.json())
-                .then (data => {
+                .then(res => res.json())
+                .then(data => {
                     setReactions(data);
                 })
-                .catch (error => {
+                .catch(error => {
                     console.error('Error:', error);
-                },[]);
+                }, []);
 
         } else {
             setSelected(emoji); //select        
@@ -42,13 +42,13 @@ const ReactionButton = () => {
                 },
                 body: JSON.stringify({ emoji }),
             })
-                .then (res => res.json())
-                .then (data => {
+                .then(res => res.json())
+                .then(data => {
                     setReactions(data);
                 })
-                .catch (error => {
+                .catch(error => {
                     console.error('Error:', error);
-                },[]);
+                }, []);
         }
     };
 
@@ -67,15 +67,15 @@ const ReactionButton = () => {
             {emojis.map((emoji) => (
                 <button
                     key={emoji}
-                    className={`cursor-pointer border-1 border-[#979797] flex items-center gap-1 px-2 py-1 rounded-full transition 
-                        ${selected === emoji ? "bg-[#555]" : "bg-[#2A2929] hover:bg-[#3A3939]"} 
-                        text-white ${selected && selected !== emoji ? "opacity-50" : ""}`}
-                      
+                    className={`flex items-center gap-1 px-2.5 py-1.5 rounded-full text-sm transition-all duration-300
+                        ${selected === emoji ? "bg-[#979797]/20 text-[#d7d7d7]" : "text-[#727272] bg-[#0f0f0f] hover:scale-105 hover:bg-[#727272]/20"} 
+                     ${selected && selected !== emoji ? "opacity-50" : ""}`}
+
                     onClick={() => handleReact(emoji)}
                 >
                     <span>{emoji}</span>
                     <span>{reactions[emoji] || 0}</span>
-                    
+
                 </button>
             ))}
         </div>

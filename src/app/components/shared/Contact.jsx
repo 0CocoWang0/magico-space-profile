@@ -23,7 +23,9 @@ const Contact = () => {
       {
         contactLinks.map((link, index) => (
           <a key={index} href={link.href} target="_blank" alt={link.alt}>
-            <img src={link.imgSrc} className='h-7 w-7 sm:h-4 sm:w-4 object-contain transition-transform duration-200 ease-in-out hover:scale-125 focus:scale-125 active:scale-125 bg-[#2A2929] p-1 sm:p-0 rounded-full' />
+            <img src={link.imgSrc} className='h-7 w-7 sm:h-4 sm:w-4 object-contain 
+            transition-transform duration-200 ease-in-out hover:scale-125 focus:scale-125
+            active:scale-125 bg-[#2A2929] p-1 sm:p-0 rounded-full' />
           </a>
         ))
       }

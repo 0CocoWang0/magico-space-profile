@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { pageTree } from '../../../../data/pageHierarchy';
-import Planet from '../hero/Planet';
+
 
 const Nav = ({ setIsOpen, isMobile, setActiveSlug, activeSlug }) => {
     //get all top-level pages
@@ -28,9 +28,9 @@ const Nav = ({ setIsOpen, isMobile, setActiveSlug, activeSlug }) => {
                         setActiveSlug(id);
                         window.location.hash = `#${id}`;
                     }}
-                    className={`transition-all duration-300 p-1 px-5 rounded-md inline-flex gap-2 
+                    className={`transition-all duration-300 py-1.5 px-5 rounded-md inline-flex gap-2 
                             ${current === id
-                            ? "text-white bg-black/20 font-semibold"
+                            ? "text-white bg-[#727272]/20 font-semibold"
                             : "hover:text-white"
                         }`}
                 >

@@ -1,6 +1,6 @@
 import DocsLayout from "./components/sections/notion/DocsLayout";
+import "./globals.css";
 
-//import PfpWrapper from "./components/shared/PfpWrapper";
 export const viewport = {
   width: "device-width",
   initialScale: 1,

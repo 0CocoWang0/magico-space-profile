@@ -21,7 +21,6 @@ const projects = [
         label: "View Website (In Progress)",
       },
     ],
-
     location: "",
     role: "UI/UX Designer, Frontend Developer",
     tools: "Figma, Next.js, Supabase",

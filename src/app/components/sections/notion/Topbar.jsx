@@ -19,10 +19,9 @@ export default function Topbar({ slug, setActiveSlug, isOpen }) {
     const path = getBreadcrumbPath(slug, pageTree)
 
     return (
-        <div className={`${isOpen ? "pl-2" : "pl-10"} flex items-center gap-3 px-4 py-3 border-b sticky top-0 z-199
+        <div className={`${isOpen ? "pl-2" : "pl-10"} flex items-center gap-3 px-4 py-3 sticky top-0 z-199
                 backdrop-blur-lg
-                bg-[#191919]/50
-                border-white/20
+                bg-[#1d1c1c]/20
                 rounded-tl-xl
                 shadow-[0_4px_30px_rgba(0,0,0,0.1)]
                 transition-all duration-300`}
