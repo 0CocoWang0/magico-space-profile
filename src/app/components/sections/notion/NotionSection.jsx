@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import Masonry from 'react-masonry-css'
 import projectsData from '../../../../data/projectsData'
@@ -23,6 +23,11 @@ const breakpointColumnsObj = {
 const NotionSection = ({ slug, setActiveSlug }) => {
     const [viewMode, setViewMode] = useState("gallery");
     const projects = projectsData
+
+    useEffect(() => {
+        // Reset scroll to top when component mounts
+        window.scrollTo(0, 0);
+    }, [viewMode]); // Empty dependency array means this runs once on mount
 
     const handleCardClick = (slug) => {
         setActiveSlug(slug);
@@ -109,7 +114,7 @@ const NotionSection = ({ slug, setActiveSlug }) => {
     return (
 
         <div className='flex flex-col justify-center items-center'>
-            <div className='h-50 sm:h-80 w-[95vw]'>
+            <div className='h-50 sm:h-80 w-[65vw] lg:w-[95vw]'>
                 <FloatingWrapper floatSpeed={0.3}>
                     <img
                         src={"/images/heroImg/bigprojects.png"}

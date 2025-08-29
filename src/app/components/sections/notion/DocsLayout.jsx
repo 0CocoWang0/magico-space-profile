@@ -97,7 +97,15 @@ export default function DocsLayout() {
             <HeadProfile setIsOpen={setIsOpen} isMobile={isMobile} setActiveSlug={setActiveSlug} activeSlug={activeSlug} />
             <Nav setIsOpen={setIsOpen} isMobile={isMobile} setActiveSlug={setActiveSlug} activeSlug={activeSlug} />
 
-            {isMobile ? (
+            <button className="absolute right-5 bottom-5 flex items-center">
+              <div className="w-6 h-6 text-[#727272] flex justify-center items-center">
+                <InfoLogo />
+              </div>
+              <p className="text-[10px] text-[#727272] whitespace-nowrap ml-1">
+                Designed, Developed by Keming Wang V3.0.3
+              </p>
+            </button>
+            {/* {isMobile ? (
               // Mobile: both icon and text always visible, no animation
               <button className="absolute right-5 bottom-5 flex items-center">
                 <div className="w-6 h-6 text-[#727272] flex justify-center items-center">
@@ -117,7 +125,7 @@ export default function DocsLayout() {
                   Designed, Developed by Keming Wang V3.0.2
                 </p>
               </button>
-            )}
+            )} */}
 
 
           </div>
