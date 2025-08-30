@@ -127,14 +127,7 @@ const projects = [
     clickable: true,
     slug: "manga",
     links: [
-      {
-        href: "https://magicospace.carrd.co",
-        label: "View Art Account Collection",
-      },
-      {
-        href: "https://x.com/KemingMagico",
-        label: "View My Twitter (Fanarts)",
-      },
+    
     ],
     location: "",
     role: "Narrative Illustrator, Animator",
