@@ -43,7 +43,7 @@ export default function Exp({ slug }) {
         p: (props) => <p className="mb-4 " {...props} />,
         Gray: (props) => <span className="text-sm text-[#727272]" {...props} />, //for caption text
         Green: (props) => <span className="text-sm text-green-300" {...props} />, //for caption text
-
+        Link: (props) => <button><a className="decoration-green-400 underline decoration-dashed" {...props} /></button>,
     }
 
     useEffect(() => {
@@ -99,7 +99,7 @@ export default function Exp({ slug }) {
                     <div className='sm:w-2/3 flex flex-col gap-5 text-sm'>
                         <TagList project={project} size={"sm"} />
                         <p>{project.description}</p>
-                        <div className='flex justify-between text-sm'>
+                        <div className='flex justify-between text-sm gap-2'>
                             <div className='flex flex-col'>
                                 <p className='text-[#979797] text-[10px]'>ROLE</p>
                                 <p>{project.role}</p>

@@ -1,4 +1,4 @@
-import DocsLayout from "./components/sections/notion/DocsLayout";
+import DocsLayout from "./components/shared/DocsLayout";
 import "./globals.css";
 
 export const viewport = {

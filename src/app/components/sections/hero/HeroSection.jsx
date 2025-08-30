@@ -16,14 +16,19 @@ export default function HeroWithWave({ setActiveSlug }) {
             imgURL: "/images/nav/goout.png"
         },
         {
-            slug: "aripple",
-            text: "ARIPPLE",
-            imgURL: "/images/projects/aripple.png"
+            slug: "pearl",
+            text: "PEARL",
+            imgURL: "/images/projects/pearl.png"
         },
         {
             slug: "nsd",
-            text: "NSD",
+            text: "NATURAL SCENES DATASET",
             imgURL: "/images/projects/nsd.png"
+        },
+        {
+            slug: "manga",
+            text: "ARTIST",
+            imgURL: "/images/projects/manga.png"
         },
 
 

@@ -26,4 +26,11 @@ export const pageTree = {
     parent: "projects",
     image: "/images/projects/nsd.png",
   },
+  manga: {
+    title: "Manga",
+    parent: "projects",
+    image: "/images/projects/manga.png",
+  },
+
+  //me: { title: "About Me", parent: null, image: "/images/nav/profile-fun.png" },
 };

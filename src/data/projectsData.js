@@ -118,28 +118,28 @@ const projects = [
   },
   {
     bait: "Being an artist in the digital age",
-    title: "BICULTURAL ARTISTS",
+    title: "ARTS AS A BRIDGE: CULTURE, STORY, AND WORLD",
     image: "/images/projects/manga.png",
     description:
       "Without boundary, I create stories and characters that transcend the limits of reality.",
     tag: ["🎨 Design", "Procreate", "Multi-media", "Animation"],
-    status: "Locked",
-    clickable: false,
+    status: "View Project",
+    clickable: true,
     slug: "manga",
     links: [
       {
-        href: "null",
-        label: "View Website 1",
+        href: "https://magicospace.carrd.co",
+        label: "View Art Account Collection",
       },
       {
-        href: "null",
-        label: "View Website 2",
+        href: "https://x.com/KemingMagico",
+        label: "View My Twitter (Fanarts)",
       },
     ],
     location: "",
-    role: "",
-    tools: "",
-    timeline: "",
+    role: "Narrative Illustrator, Animator",
+    tools: "Procreate, After Effects, Photoshop, Clip Studio Paint, Canva",
+    timeline: "Ongoing (2019-Present)",
   },
 ];
 export default projects;
