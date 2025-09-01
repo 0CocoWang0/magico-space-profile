@@ -17,7 +17,7 @@ const ProjectCard = ({ project, handleCardClick }) => (
             </div>
             <div className="px-5">
                 <h3 className="text-white text-sm mb-2">{project.bait}</h3>
-                <p className="text-[#727272] text-[10px]">{project.description}</p>
+                <p className="text-[#727272] text-[10px] mb-2">{project.description}</p>
                 <TagList project={project} size={"[10px]"} />
             </div>
             <div className="place-self-end px-5">

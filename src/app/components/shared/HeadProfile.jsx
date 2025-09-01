@@ -4,6 +4,7 @@ import HomeShape from "../../../../public/images/nav/home-shape.svg"
 import LinkedinShape from "../../../../public/images/nav/linkedin-shape.svg"
 import SendShape from "../../../../public/images/nav/send-shape.svg"
 import GithubShape from "../../../../public/images/nav/github-shape.svg"
+import QuoteTyper from './QuoteTyper';
 
 
 
@@ -58,11 +59,9 @@ const HeadProfile = ({ setIsOpen, isMobile, setActiveSlug, activeSlug }) => {
 
                 </div>
             </div>
-            <div className='flex flex-col my-5 gap-3'>
 
-                <p className='text-[10px] text-[#979797]'> Today's Quote</p>
-                <p className='text-sm text-[#d7d7d7]'>" I could be a neuroscientist spotting commercial opportunities, a linguist building web
-                    platforms, or a designer conducting data analysis." </p>
+            <div className='h-30'>
+                <QuoteTyper />
             </div>
             <div className='md:pb-10 pb-5'>
                 <ReactionButton />

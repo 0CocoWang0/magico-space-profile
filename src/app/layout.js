@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Cursor from "./components/shared/Cursor";
-
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {

@@ -57,7 +57,7 @@ button {
 .hero-nav {
   align-items: center;
   width: fit-content;
-  height: fit-content;
+
   border-radius: 10px;
   margin: 0 auto;
   backdrop-filter: blur(8px); /* for older browsers if needed */

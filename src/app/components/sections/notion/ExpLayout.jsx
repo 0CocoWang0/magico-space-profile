@@ -80,7 +80,7 @@ export default function Exp({ slug }) {
                                 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4 pointer-events-none'}`}>
                                     <div className='flex flex-col gap-2' ref={mdxRef}>
                                         {project.links?.map((linkObj, index) => (
-                                            <button key={index} onClick={() => { window.open(linkObj.href, "_blank", "noopener, noreferrer") }} className="group inline-flex gap-5 items-center justify-between bg-white/10 border border-white/20 rounded-xl text-sm text-[#979797] p-4 w-full hover:bg-black/10 active:bg-black/10 transition-all duration-300" >
+                                            <button key={index} onClick={() => { window.open(linkObj.href, "_blank", "noopener, noreferrer") }} className="group inline-flex gap-5 items-center justify-between bg-white/10 rounded-xl text-sm text-[#979797] p-4 w-full hover:bg-black/10 active:bg-black/10 transition-all duration-300" >
                                                 {linkObj.label}
                                                 <img
                                                     src="/images/nav/arrowdown.jpg"
@@ -117,7 +117,7 @@ export default function Exp({ slug }) {
                         <div className='inline-flex gap-2' ref={mdxRef}>
                             {project.links?.map((linkObj, index) => (
 
-                                <button key={index} onClick={() => { window.open(linkObj.href, "_blank", "noopener, noreferrer") }} className="group inline-flex justify-between gap-5 items-center bg-white/10 border border-white/20 rounded-xl text-sm text-[#979797] p-4 w-full hover:bg-black/10 active:bg-black/10 transition-all duration-300" >
+                                <button key={index} onClick={() => { window.open(linkObj.href, "_blank", "noopener, noreferrer") }} className="group inline-flex justify-between gap-5 items-center bg-white/10 rounded-xl text-sm text-[#979797] p-4 w-full hover:bg-black/10 active:bg-black/10 transition-all duration-300" >
                                     <p>
                                         {linkObj.label}
                                     </p>

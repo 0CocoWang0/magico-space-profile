@@ -11,7 +11,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import InfoLogo from "../../../../public/images/nav/info-shape.svg"
 import SideBar from "../../../../public/images/nav/sidebar-shape.svg"
 import AboutMeSection from "../sections/aboutme/AboutMeSection";
-
+import PfpStack from "../shared/PfpStack"
 
 export default function DocsLayout() {
   const [isOpen, setIsOpen] = useState(true);
@@ -80,6 +80,14 @@ export default function DocsLayout() {
         >
           <SideBar />
         </button>
+        <button className="absolute bottom-2 left-5 flex items-center">
+          <div className="w-6 h-6 text-[#727272] flex justify-center items-center">
+            <InfoLogo />
+          </div>
+          <p className="text-[10px] text-[#727272] whitespace-nowrap ml-1">
+            Designed, Developed by Keming Wang V3.0.4
+          </p>
+        </button>
 
         <aside
           className={`
@@ -91,20 +99,14 @@ export default function DocsLayout() {
           }}
         >
           <div
-            className={`flex flex-col gap-10 px-5 pt-3 transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            className={`h-full flex flex-col gap-10 px-5 pt-3 transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
               }`}
           >
             <HeadProfile setIsOpen={setIsOpen} isMobile={isMobile} setActiveSlug={setActiveSlug} activeSlug={activeSlug} />
-            <Nav setIsOpen={setIsOpen} isMobile={isMobile} setActiveSlug={setActiveSlug} activeSlug={activeSlug} />
 
-            <button className="absolute right-5 bottom-5 flex items-center">
-              <div className="w-6 h-6 text-[#727272] flex justify-center items-center">
-                <InfoLogo />
-              </div>
-              <p className="text-[10px] text-[#727272] whitespace-nowrap ml-1">
-                Designed, Developed by Keming Wang V3.0.4
-              </p>
-            </button>
+            <div className="pb-10">
+              <Nav setIsOpen={setIsOpen} isMobile={isMobile} setActiveSlug={setActiveSlug} activeSlug={activeSlug} />
+            </div>
             {/* {isMobile ? (
               // Mobile: both icon and text always visible, no animation
               <button className="absolute right-5 bottom-5 flex items-center">
@@ -126,15 +128,15 @@ export default function DocsLayout() {
                 </p>
               </button>
             )} */}
-
-
           </div>
+
         </aside>
 
         <main
           className={`
           flex-1 bg-[#0F0F0F] transition-all duration-500 h-full w-full overflow-auto rounded-t-xl`}
         >
+
 
           <div className="rounded-t-xl w-full relative">
             {activeSlug !== "hero" && (

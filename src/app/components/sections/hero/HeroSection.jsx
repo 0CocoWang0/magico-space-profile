@@ -5,9 +5,21 @@ import PfpStack from "../../shared/PfpStack";
 import Recommend from "../hero/Recommend";
 import PokeWindow from "./PokeWindow"
 import FloatingWrapper from "../../shared/FloatingWrapper"
-
+import gsap from "gsap";
+import { useRef, useEffect } from "react";
 
 export default function HeroWithWave({ setActiveSlug }) {
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        if (!containerRef.current) return;
+
+        gsap.fromTo(
+            containerRef.current,
+            { scale: 0, opacity: 0 }, // start
+            { scale: 1, opacity: 1, duration: 1, ease: "back.out(1.7)" } // end
+        );
+    }, []);
     const isMobile = useIsMobile(640); // Use custom hook to determine if mobile
     const recommendItems = [
         {
@@ -49,7 +61,7 @@ export default function HeroWithWave({ setActiveSlug }) {
                     )}
                 </div>
 
-                <div className="w-full h-1/3 sm:px-10">
+                <div className="w-full h-1/3 sm:px-10" ref={containerRef}>
                     <FloatingWrapper floatSpeed={0.3}>
                         {/* For medium and larger screens */}
                         <img

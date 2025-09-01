@@ -78,8 +78,8 @@ const projects = [
     ],
 
     location: "McGill University, Montreal",
-    role: "Website Deisgn & Development Deirector",
-    tools: "Figma, Webflow, React, CMS",
+    role: "Director of Technology",
+    tools: "Figma, Next.js, CMS",
     timeline: "Ongoing (2024-Present)",
   },
   {
@@ -126,9 +126,7 @@ const projects = [
     status: "View Project",
     clickable: true,
     slug: "manga",
-    links: [
-    
-    ],
+    links: [],
     location: "",
     role: "Narrative Illustrator, Animator",
     tools: "Procreate, After Effects, Photoshop, Clip Studio Paint, Canva",

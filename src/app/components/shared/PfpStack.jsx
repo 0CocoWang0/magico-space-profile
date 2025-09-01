@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Contact from "./Contact.jsx";
 import { motion, AnimatePresence } from "framer-motion";
 import useIsMobile from "../../hooks/useIsMobile";
-
+import BouncingImage from "../shared/BouncingImage.jsx"
 
 const PfpStack = () => {
     const isMobile = useIsMobile(640); // Use custom hook to determine if mobile
@@ -32,21 +32,19 @@ const PfpStack = () => {
     return (
         <nav
             className={`
-                hero-nav gap-2 p-1 sm:px-4 sm:gap-4 z-110 sm:min-w-[530px]
+                hero-nav h-15 gap-2 p-1 sm:px-4 sm:gap-4 z-110 sm:min-w-[530px]
                 backdrop-blur-3xl
                 bg-white/10
-                border border-white/20
+                
                 rounded-xl
                 shadow-[0_4px_30px_rgba(0,0,0,0.1)]
                 transition-all duration-300
                 flex
             `}
         >
-            <img
-                src="/images/nav/profile-fun.png"
-                alt="Profile"
-                className="w-[40px] h-[40px] border-[1px] border-black rounded-[10px]"
-            />
+            <div className="flex justify-center w-[43px] h-[43px]">
+                <BouncingImage />
+            </div>
             <button>
                 {
                     isMobile ? (
