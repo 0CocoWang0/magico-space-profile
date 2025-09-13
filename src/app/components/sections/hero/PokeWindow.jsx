@@ -5,6 +5,7 @@ import Planet from "./Planet"
 import FloatingWrapper from '../../shared/FloatingWrapper';
 
 const visuals = [
+    { type: "webm", src: "/videos/flower.webm" },
     { type: "svg", src: "/images/planet3d.png" },
     { type: "component", src: <Planet /> },
     { type: "gif", src: "/images/rain.gif" },
@@ -54,7 +55,6 @@ const PokeWindow = () => {
             onMouseLeave={handleMouseLeave}
             ref={containerRef}
         >
-
             {currentVisual.type === "image" || currentVisual.type === "gif" ? (
                 <img src={currentVisual.src}
                     alt="Visual"
@@ -62,14 +62,27 @@ const PokeWindow = () => {
                     draggable={false}
                 />
             ) : currentVisual.type === "svg" ? (
-                <FloatingWrapper> <img
-                    src={currentVisual.src}
-                    alt="SVG"
-                    className='w-full h-full object-cover'
-                    draggable={false}
-                />
+                <FloatingWrapper>
+                    <img
+                        src={currentVisual.src}
+                        alt="SVG"
+                        className='w-full h-full object-cover'
+                        draggable={false}
+                    />
                 </FloatingWrapper>
-            ) : currentVisual.src}
+            ) : currentVisual.type === "webm" ? (
+                <video
+                    src={currentVisual.src}
+                    className='w-full h-full object-cover'
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{ background: "transparent" }}
+                />
+            ) : (
+                currentVisual.src
+            )}
         </button>
     )
 }

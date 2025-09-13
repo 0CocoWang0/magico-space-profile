@@ -72,7 +72,7 @@ const projects = [
     slug: "nord",
     links: [
       {
-        href: "https://msbn-consulting.webflow.io",
+        href: "https://nord-consulting.vercel.app/",
         label: "View Website (In Progress)",
       },
     ],

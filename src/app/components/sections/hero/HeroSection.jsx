@@ -99,7 +99,7 @@ export default function HeroWithWave({ setActiveSlug }) {
                         </div>
                         <div className="hidden md:flex md:flex-col md:col-span-1">
                             <p className="text-[10px] text-[#979797] mb-2">Poke Me!</p>
-                            <div className="h-full w-full flex justify-center bg-[#2A2929]/20 rounded-2xl">
+                            <div className="h-30 w-full flex justify-center bg-[#2A2929]/20 rounded-2xl">
                                 <PokeWindow />
                             </div>
                         </div>
