@@ -19,7 +19,7 @@ const HeadProfile = ({ setIsOpen, isMobile, setActiveSlug, activeSlug }) => {
         {
             key: 'linkedin',
             icon: <LinkedinShape className='w-4.5 h-4.5' />,
-            onClick: () => window.open("https://www.linkedin.com/in/magicoco117/", "_blank"),
+            onClick: () => window.open("https://www.linkedin.com/in/wkmxyz/", "_blank"),
         },
         {
             key: 'github',
