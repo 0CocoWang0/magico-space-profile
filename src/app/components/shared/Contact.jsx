@@ -8,7 +8,7 @@ const Contact = () => {
       alt: "email"
     },
     {
-      href: "https://www.linkedin.com/in/magicoco117/",
+      href: "https://www.linkedin.com/in/wkmxyz/",
       imgSrc: "/images/nav/linkedin.png",
       alt: "linkedin"
     },
