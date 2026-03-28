@@ -83,9 +83,8 @@ export default function HeroWithWave({ setActiveSlug }) {
                 <div className="px-5 flex flex-col items-center justify-center md:w-[45vw]">
                     <div className="w-full flex justify-start items-center text-center gap-2 sm:gap-5 text-sm sm:mb-10 mb-2.5">
                         <div className="rounded-2xl bg-green-400 text-black px-5 py-1">Systems Thinker</div>
-                        <div className="rounded-2xl bg-[#1d1c1c] text-white px-5 py-1">Web Dev</div>
                         <div className="rounded-2xl bg-[#1d1c1c] text-white px-5 py-1">Product Designer</div>
-                        <div className="rounded-2xl bg-[#1d1c1c] text-white h-full items-center flex px-5 py-1">Artist</div>
+                        <div className="rounded-2xl bg-[#1d1c1c] text-white h-full items-center flex px-5 py-1">Design Engineer</div>
 
                     </div>
 
