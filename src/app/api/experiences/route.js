@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 import { MongoClient } from "mongodb";
 
-const uri = process.env.MONGODB_URI; // Ensure this is set in your environment variables
-const client = new MongoClient(uri);
-
 export async function GET() {
+  const uri = process.env.MONGODB_URI; // Ensure this is set in your environment variables
+  const client = new MongoClient(uri);
+
   try {
     await client.connect();
     const db = client.db("Magico-Portfolio"); // change this
