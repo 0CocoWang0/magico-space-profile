@@ -40,8 +40,8 @@ const Cursor = () => {
         };
 
         const animate = () => {
-            currentX += (mouseX - currentX) * 0.1;
-            currentY += (mouseY - currentY) * 0.1;
+            currentX = mouseX;
+            currentY = mouseY;
 
             blob.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
             dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
@@ -100,7 +100,7 @@ const Cursor = () => {
             />
             <div
                 ref={dotRef}
-                className="fixed -top-2 -left-2 bg-green-300 z-[901] pointer-events-none mix-blend-difference transition-all duration-300 ease-out"
+                className="fixed -top-2 -left-2 bg-green-300 z-[901] pointer-events-none mix-blend-difference"
                 style={{ transform: "translate3d(0, 0, 0)" }}
             />
         </>

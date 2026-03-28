@@ -63,17 +63,11 @@ export default function HeroWithWave({ setActiveSlug }) {
 
                 <div className="w-full h-1/3 sm:px-10" ref={containerRef}>
                     <FloatingWrapper floatSpeed={0.3}>
-                        {/* For medium and larger screens */}
-                        <img
-                            className="w-full h-full object-contain hidden lg:block"
-                            src="/images/heroImg/bigname.png"
-                            alt="Hero Large"
-                            draggable={false}
-                        />
 
-                        {/* For small and medium screens */}
+
+
                         <img
-                            className="w-full h-full object-cover block lg:hidden"
+                            className="w-full h-full object-contain"
                             src="/images/heroImg/bigname2.png"
                             alt="Hero Small"
                             draggable={false}
