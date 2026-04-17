@@ -21,6 +21,11 @@ export const pageTree = {
     parent: "projects",
     image: "/images/mdx/foco/landing-dashboard.png",
   },
+  bounce: {
+    title: "Bounce Central",
+    parent: "projects",
+    image: "/images/mdx/bounce/bounce-screens.png",
+  },
   pearl: {
     title: "Pearl",
     parent: "projects",

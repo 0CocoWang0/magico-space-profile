@@ -31,18 +31,39 @@ const projects = [
     timeline: "Dec 2025 – Present",
   },
   {
+    bait: "BOLT Case Competition · 3rd Place",
+    title: "BOUNCE CENTRAL",
+    image: "/images/mdx/bounce/bounce-screens.png",
+    description:
+      "Reimagining peer-to-peer payments as a social experience: event-based payments, shared moments, progress tracking, and light gamification to cut friction and boost engagement.",
+    tag: [
+      "🏆 Case Challenge",
+      "💻 Website",
+      "Product Design",
+      "Frontend Dev",
+      "User Research",
+    ],
+    status: "View Project",
+    clickable: true,
+    slug: "bounce",
+    links: [
+      {
+        href: "https://bounce-me-now.vercel.app/",
+        label: "View Website",
+      },
+    ],
+    location: "",
+    role: "Product Designer & Developer, User Researcher",
+    tools: "Figma, Next.js, User Interviews",
+    timeline: "2026 (Case Competition)",
+  },
+  {
     bait: "JacHacks 2026 · 2nd Place",
     title: "FOCO",
     image: "/images/mdx/foco/landing-dashboard.png",
     description:
       "Turns security cameras + floor plans into a live 3D map: see motion as heat, spot busy rooms, and click a room for its footprint. Spatial awareness for campuses.",
-    tag: [
-      "🏆 Hackathon",
-      "💻 Website",
-      "Computer Vision",
-      "3D",
-      "Next.js",
-    ],
+    tag: ["🏆 Hackathon", "💻 Website", "Computer Vision", "3D", "Next.js"],
     status: "View Project",
     clickable: true,
     slug: "foco",
