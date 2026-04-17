@@ -11,6 +11,11 @@ export const pageTree = {
     image: "/images/nav/goout.png",
   },
 
+  foco: {
+    title: "Foco",
+    parent: "projects",
+    image: "/images/mdx/foco/landing-dashboard.png",
+  },
   pearl: {
     title: "Pearl",
     parent: "projects",

@@ -1,0 +1,64 @@
+import Image from "next/image";
+
+---
+
+# Overview
+
+> Foco — spatial awareness for campuses.
+
+Foco turns existing security cameras and a floor plan into a **live 3D map** of a building. See motion as heat, spot the busiest rooms at a glance, and click any room to reveal its footprint — a new way to understand how space is actually being used.
+
+Built in 24 hours at **JacHacks 2026**, where it placed **2nd overall**.
+
+## The Problem
+
+Campuses are full of cameras, but the feeds live in silos — a grid of shaky tiles that nobody watches. Meanwhile, students and staff constantly ask the same question: _"Where is there still space right now?"_
+
+- <Green>Invisible occupancy:</Green> Camera feeds don't answer "how busy is
+  each room?"
+- <Green>No spatial context:</Green> A 2D grid doesn't reflect how a building
+  is actually laid out.
+- <Green>Passive infrastructure:</Green> Existing cameras sit unused for
+  anything beyond security.
+
+## What We Built
+
+<div className="flex flex-col gap-5">
+  <Image
+    src="/images/mdx/foco/landing-dashboard.png"
+    alt="Foco landing dashboard"
+    width={1000}
+    height={600}
+    draggable={false}
+  />
+  <Gray>The Foco dashboard — a live 3D map of the building with motion-based heat.</Gray>
+</div>
+
+<div className="flex flex-col gap-5">
+  <Image
+    src="/images/mdx/foco/cameras.png"
+    alt="Foco camera feeds"
+    width={1000}
+    height={600}
+    draggable={false}
+  />
+  <Gray>Multiple camera feeds, unified into a single spatial view.</Gray>
+</div>
+
+<div className="flex flex-col gap-5">
+  <Image
+    src="/images/mdx/foco/3d-calibrations.png"
+    alt="Foco 3D calibrations"
+    width={1000}
+    height={600}
+    draggable={false}
+  />
+  <Gray>Calibrating cameras against the floor plan to build the 3D map.</Gray>
+</div>
+
+---
+
+# My Role
+Built this with Faiz Mustansar (https://faizm.ca) in 24 hours!
+We split the system across computer vision + backend and spatial visualization, where I mainly focused on the AI pipeline: designing and implementing the behavior analysis using Google Gemini vision models, and making the system work on real footage end-to-end. 
+I also drove the overall product direction and built the main dashboard experience.

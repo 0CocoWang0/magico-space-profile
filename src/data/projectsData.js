@@ -1,5 +1,36 @@
 const projects = [
   {
+    bait: "JacHacks 2026 · 2nd Place",
+    title: "FOCO",
+    image: "/images/mdx/foco/landing-dashboard.png",
+    description:
+      "Turns security cameras + floor plans into a live 3D map: see motion as heat, spot busy rooms, and click a room for its footprint — spatial awareness for campuses.",
+    tag: [
+      "🏆 Hackathon",
+      "💻 Website",
+      "Computer Vision",
+      "3D",
+      "Next.js",
+    ],
+    status: "View Project",
+    clickable: true,
+    slug: "foco",
+    links: [
+      {
+        href: "https://devpost.com/software/foco",
+        label: "View Devpost",
+      },
+      {
+        href: "https://github.com/faizm10/jachacks26",
+        label: "View GitHub",
+      },
+    ],
+    location: "JacHacks 2026",
+    role: "Co-hacker (2-person team)",
+    tools: "Next.js, Computer Vision, 3D",
+    timeline: "April 2026 (Hackathon)",
+  },
+  {
     bait: "Every Creation is a Pearl",
     title: "PEARL",
     image: "/images/projects/pearl.png",

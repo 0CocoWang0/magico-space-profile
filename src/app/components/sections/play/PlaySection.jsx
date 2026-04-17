@@ -7,7 +7,7 @@ export default function PlaySection({ activeSlug, setActiveSlug }) {
     return (
         <section
             id="play"
-            className="relative min-h-[100dvh] w-full bg-[#0f0f0f] text-white overflow-y-auto"
+            className="relative min-h-[100dvh] w-full bg-[#0f0f0f] text-white overflow-hidden"
         >
             <div className="max-w-[960px] mx-auto px-6 pt-24 pb-16 flex flex-col gap-10">
                 <div className="flex flex-col md:flex-row md:items-start gap-8">
@@ -32,10 +32,20 @@ export default function PlaySection({ activeSlug, setActiveSlug }) {
                     <div className="w-5 h-5 flex justify-center items-center">
                         <InfoLogo />
                     </div>
-                    <p className="text-[10px]">
-                        Designed, Developed by Keming Wang V3.0.4
+                    <p>
+                        Designed, Developed by Keming Wang. Last updated April 16, 2026
                     </p>
+
                 </div>
+            </div>
+
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 flex items-center justify-center overflow-hidden">
+                <img
+                    src="/images/revamp/signature-w-chinese.png"
+                    alt="Keming Wang signature"
+                    draggable={false}
+                    className="w-[110vw] max-w-none h-auto select-none"
+                />
             </div>
         </section>
     );
