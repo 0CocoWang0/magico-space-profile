@@ -179,7 +179,7 @@ export default function HeroSection({ setActiveSlug }) {
             }}
         >
             {/* Large signature */}
-            <div className="absolute inset-0 flex flex-col items-center justify-start pt-[18%] sm:justify-center sm:pt-0 pointer-events-none">
+            <div className="absolute inset-0 flex flex-col items-center justify-start pt-[28%] md:pt-[0%] sm:justify-center sm:pt-0 pointer-events-none">
                 <div>
                     <WiggleElement className="pointer-events-auto" intensity={0.25}>
                         <motion.img
@@ -196,7 +196,7 @@ export default function HeroSection({ setActiveSlug }) {
                         initial={{ opacity: 0, filter: "blur(20px)" }}
                         animate={{ opacity: 1, filter: "blur(0px)" }}
                         transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-                        className="absolute top-[45%] sm:top-[60%] left-1/2 -translate-x-1/2 text-white text-sm flex flex-col justify-center text-center space-y-1"
+                        className="absolute top-[20%] sm:top-[60%] left-1/2 -translate-x-1/2 text-white text-sm flex flex-col justify-center text-center space-y-1"
                     >
                         <p>Designer</p>
                         <p>Engineer</p>
