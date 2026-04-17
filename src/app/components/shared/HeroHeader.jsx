@@ -53,7 +53,7 @@ export default function HeroHeader({ activeSlug = "hero", setActiveSlug }) {
                         <button
                             key={link.slug}
                             onClick={() => handleNav(link.slug)}
-                            className="relative transition-colors duration-300"
+                            className="relative transition-colors duration-300 group"
                         >
                             {isActive && (
                                 <motion.img
@@ -70,9 +70,24 @@ export default function HeroHeader({ activeSlug = "hero", setActiveSlug }) {
                                     fontWeight: isActive ? 600 : 400,
                                 }}
                                 transition={{ duration: 0.3 }}
-                                className="inline-block"
+                                className="inline-block transition-transform duration-300 ease-out group-hover:-translate-y-1"
                             >
-                                {link.label}
+                                {link.slug === "play" ? (
+                                    <motion.span
+                                        style={{ display: "inline-block", transformOrigin: "center" }}
+                                        animate={{ rotate: [0, -10, 10, -7, 7, -3, 0] }}
+                                        transition={{
+                                            duration: 0.9,
+                                            ease: "easeInOut",
+                                            repeat: Infinity,
+                                            repeatDelay: 6,
+                                        }}
+                                    >
+                                        {link.label}
+                                    </motion.span>
+                                ) : (
+                                    link.label
+                                )}
                             </motion.span>
                         </button>
                     );
