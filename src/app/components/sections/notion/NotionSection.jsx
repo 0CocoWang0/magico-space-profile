@@ -19,8 +19,10 @@ const breakpointColumnsObj = {
 }
 
 
-const NotionSection = ({ slug, setActiveSlug }) => {
-    const [viewMode, setViewMode] = useState("gallery");
+const NotionSection = ({ slug, setActiveSlug, viewMode: viewModeProp, setViewMode: setViewModeProp }) => {
+    const [localViewMode, setLocalViewMode] = useState("gallery");
+    const viewMode = viewModeProp ?? localViewMode;
+    const setViewMode = setViewModeProp ?? setLocalViewMode;
     const projects = projectsData
 
     useEffect(() => {

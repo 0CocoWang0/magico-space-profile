@@ -14,9 +14,13 @@ const TOP_LEVEL_SLUGS = ["hero", "projects", "play", "me"];
 export default function DocsLayout() {
   const heroRef = useRef(null)
   const notionRef = useRef(null)
+  const mainRef = useRef(null)
+  const scrollMapRef = useRef({})
+  const prevSlugRef = useRef(null)
 
   const [activeSlug, setActiveSlug] = useState("hero");
   const [isReady, setIsReady] = useState(false);
+  const [projectsViewMode, setProjectsViewMode] = useState("gallery");
   useEffect(() => {
     function handleHashChange() {
       const hash = window.location.hash?.replace("#", "");
@@ -27,6 +31,22 @@ export default function DocsLayout() {
     setIsReady(true);
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
+
+  useEffect(() => {
+    const main = mainRef.current;
+    if (!main) return;
+    const prevSlug = prevSlugRef.current;
+    if (prevSlug && prevSlug !== activeSlug) {
+      scrollMapRef.current[prevSlug] = main.scrollTop;
+    }
+    prevSlugRef.current = activeSlug;
+    const timeoutId = setTimeout(() => {
+      if (mainRef.current) {
+        mainRef.current.scrollTop = scrollMapRef.current[activeSlug] || 0;
+      }
+    }, 320);
+    return () => clearTimeout(timeoutId);
+  }, [activeSlug]);
 
   useSwipeScroll({
     onSwipeUp: () => {
@@ -46,7 +66,7 @@ export default function DocsLayout() {
   };
 
   return (
-    <main className="h-[100dvh] w-full bg-[#0F0F0F] overflow-auto relative">
+    <main ref={mainRef} className="h-[100dvh] w-full bg-[#0F0F0F] overflow-auto relative">
       <HeroHeader activeSlug={activeSlug} setActiveSlug={setActiveSlug} />
 
       {isProjectDetail && (
@@ -69,7 +89,7 @@ export default function DocsLayout() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             {activeSlug === "projects" ? (
-              <NotionSection id="projects" slug={activeSlug} setActiveSlug={setActiveSlug} />
+              <NotionSection id="projects" slug={activeSlug} setActiveSlug={setActiveSlug} viewMode={projectsViewMode} setViewMode={setProjectsViewMode} />
             ) : activeSlug === "hero" ? (
               <HeroSection id="hero" activeSlug={activeSlug} setActiveSlug={setActiveSlug} />
             ) : activeSlug === "play" ? (
