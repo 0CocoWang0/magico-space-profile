@@ -1,10 +1,41 @@
 const projects = [
   {
+    bait: "Product Designer & Engineer · Trove (Startup, Beta)",
+    title: "TROVE",
+    image: "/images/mdx/trove/trove-screens.png",
+    description:
+      "Owned the core interactive playthrough experience end-to-end, driving 2000+ completed sessions, 10+ minute engagement, and a 72% organic return rate.",
+    tag: [
+      "🍎 Software",
+      "Product Design",
+      "Frontend Dev",
+      "Framer Motion",
+      "Next.js",
+    ],
+    status: "View Project",
+    clickable: true,
+    slug: "trove",
+    links: [
+      {
+        href: "https://trove.is",
+        label: "Visit Trove",
+      },
+      {
+        href: "https://www.linkedin.com/posts/heyohelen_were-officially-in-beta-the-activity-7425602000110886912-DH68",
+        label: "Beta Launch (LinkedIn)",
+      },
+    ],
+    location: "Remote",
+    role: "Product Designer & Engineer",
+    tools: "Next.js, React, Framer Motion, Figma",
+    timeline: "Dec 2025 – Present",
+  },
+  {
     bait: "JacHacks 2026 · 2nd Place",
     title: "FOCO",
     image: "/images/mdx/foco/landing-dashboard.png",
     description:
-      "Turns security cameras + floor plans into a live 3D map: see motion as heat, spot busy rooms, and click a room for its footprint — spatial awareness for campuses.",
+      "Turns security cameras + floor plans into a live 3D map: see motion as heat, spot busy rooms, and click a room for its footprint. Spatial awareness for campuses.",
     tag: [
       "🏆 Hackathon",
       "💻 Website",

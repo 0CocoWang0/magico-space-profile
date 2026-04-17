@@ -4,15 +4,15 @@ import Image from "next/image";
 
 # Overview
 
-> Foco — spatial awareness for campuses.
+> Foco: spatial awareness for campuses.
 
-Foco turns existing security cameras and a floor plan into a **live 3D map** of a building. See motion as heat, spot the busiest rooms at a glance, and click any room to reveal its footprint — a new way to understand how space is actually being used.
+Foco turns existing security cameras and a floor plan into a **live 3D map** of a building. See motion as heat, spot the busiest rooms at a glance, and click any room to reveal its footprint. A new way to understand how space is actually being used.
 
 Built in 24 hours at **JacHacks 2026**, where it placed **2nd overall**.
 
 ## The Problem
 
-Campuses are full of cameras, but the feeds live in silos — a grid of shaky tiles that nobody watches. Meanwhile, students and staff constantly ask the same question: _"Where is there still space right now?"_
+Campuses are full of cameras, but the feeds live in silos: a grid of shaky tiles that nobody watches. Meanwhile, students and staff constantly ask the same question: _"Where is there still space right now?"_
 
 - <Green>Invisible occupancy:</Green> Camera feeds don't answer "how busy is
   each room?"
@@ -31,7 +31,7 @@ Campuses are full of cameras, but the feeds live in silos — a grid of shaky ti
     height={600}
     draggable={false}
   />
-  <Gray>The Foco dashboard — a live 3D map of the building with motion-based heat.</Gray>
+  <Gray>The Foco dashboard: a live 3D map of the building with motion-based heat.</Gray>
 </div>
 
 <div className="flex flex-col gap-5">
@@ -59,6 +59,6 @@ Campuses are full of cameras, but the feeds live in silos — a grid of shaky ti
 ---
 
 # My Role
-Built this with Faiz Mustansar (https://faizm.ca) in 24 hours!
+Built this with <Green><Link href="https://faizm.ca">Faiz Mustansar</Link></Green> in 24 hours!
 We split the system across computer vision + backend and spatial visualization, where I mainly focused on the AI pipeline: designing and implementing the behavior analysis using Google Gemini vision models, and making the system work on real footage end-to-end. 
 I also drove the overall product direction and built the main dashboard experience.

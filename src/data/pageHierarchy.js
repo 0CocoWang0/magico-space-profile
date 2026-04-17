@@ -11,6 +11,11 @@ export const pageTree = {
     image: "/images/nav/goout.png",
   },
 
+  trove: {
+    title: "Trove",
+    parent: "projects",
+    image: "/images/mdx/trove/trove-screens.png",
+  },
   foco: {
     title: "Foco",
     parent: "projects",
