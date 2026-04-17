@@ -15,7 +15,7 @@ const items = [
         detail: {
             title: "Apple Pencil · Magico Pen 😎",
             subtitle: "Since 2020",
-            description: "Where I sketch rough ideas before they become pixels.",
+            description: "Named after a great artist Magicoco...(which is literally just me)",
             featured: [{ slug: "manga", label: "Artist" }],
         },
     },
@@ -53,8 +53,8 @@ const items = [
         detail: {
             title: "Figma",
             subtitle: "Since 2023",
-            description: "Where I reason idea into space...",
-            featured: [{ slug: "pearl", label: "Project 1" }],
+            description: "Pressed F and just created Frame 1410103974",
+            featured: [{ slug: "pearl", label: "Pearl" }],
         },
     },
     {
@@ -67,7 +67,19 @@ const items = [
             title: "Sketch",
             subtitle: "Since 2023",
             description: "When i want a change of scenery from Figma... ;p",
-            featured: [{ slug: "Aripple", label: "Aripple" }],
+            featured: [{ slug: "aripple", label: "Aripple" }],
+        },
+    },
+    {
+        id: "vscode",
+        src: "/images/revamp/vscode-logo.png",
+        alt: "VS Code",
+        style: { top: "78%", left: "48%", width: "80px" },
+        mobileStyle: { top: "62%", left: "45%", width: "50px" },
+        detail: {
+            title: "VS Code",
+            subtitle: "Daily driver",
+            description: "So it's really not just about my ideas, but also about the craft of building them.",
         },
     },
     {
