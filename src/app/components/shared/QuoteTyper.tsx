@@ -52,7 +52,7 @@ export default function QuoteTyper() {
   return (
     <div className="flex flex-col my-5 gap-3">
       <div className="flex justify-between align-middle items-center">
-        <p className="text-[10px] text-[#979797]">My Quotes</p>
+        <p className="text-sm text-[#979797]">My Quotes</p>
         <FancyButton
           icon={RefreshIcon}
           label=""
@@ -61,7 +61,7 @@ export default function QuoteTyper() {
         />
       </div>
 
-      <p className="text-sm text-[#d7d7d7]">
+      <p className="text-md text-[#d7d7d7]">
         {displayedText}
         <span
           className={`inline-block w-1 ml-1 ${

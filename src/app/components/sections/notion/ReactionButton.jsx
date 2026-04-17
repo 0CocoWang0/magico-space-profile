@@ -68,7 +68,7 @@ const ReactionButton = () => {
                 <button
                     key={emoji}
                     className={`flex items-center gap-1 px-2.5 py-1.5 rounded-full text-sm transition-all duration-300
-                        ${selected === emoji ? "bg-[#979797]/20 text-[#d7d7d7]" : "text-[#727272] bg-[#0f0f0f] hover:scale-105 hover:bg-[#727272]/20"} 
+                        ${selected === emoji ? "bg-[#979797]/20 text-[#d7d7d7]" : "text-[#727272] bg-[#000000] hover:scale-105 hover:bg-[#727272]/20"} 
                      ${selected && selected !== emoji ? "opacity-50" : ""}`}
 
                     onClick={() => handleReact(emoji)}

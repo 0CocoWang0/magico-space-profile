@@ -13,7 +13,7 @@ const defaultImages = [
 const emojiList = ['✨', '🎨', '🎮', '🌍', '😎', '👻'];
 
 
-const BouncingImage = ({ images = defaultImages, className = '', initialIndex = 0 }) => {
+const BouncingImage = ({ images = defaultImages, className = '', initialIndex = 0, size = 40, rounded = 'rounded-[10px]' }) => {
     const [currentIndex, setCurrentIndex] = useState(initialIndex);
     const [emojis, setEmojis] = useState([]);
     const [highlight, setHighlight] = useState(false);
@@ -69,7 +69,7 @@ const BouncingImage = ({ images = defaultImages, className = '', initialIndex = 
     };
 
     return (
-        <div className={`relative inline-block ${className} ${highlight ? 'rainbow-border' : ''}`}>
+        <div className={`relative inline-block ${rounded} ${className} ${highlight ? 'rainbow-ring' : ''}`}>
 
             <button className='flex justify-center'>
                 <img
@@ -77,7 +77,8 @@ const BouncingImage = ({ images = defaultImages, className = '', initialIndex = 
                     src={images[currentIndex]}
                     alt="Bouncing"
                     onClick={handleClick}
-                    className="cursor-pointer border border-black rounded-[10px] w-[40px] h-[40px] object-cover"
+                    style={{ width: size, height: size }}
+                    className={`cursor-pointer border border-black object-cover ${rounded}`}
                 />
             </button>
             {emojis.map(({ id, emoji, x, y }) => (
@@ -95,34 +96,17 @@ const BouncingImage = ({ images = defaultImages, className = '', initialIndex = 
                 </span>
             ))}
             <style jsx>{`
-        .rainbow-border {
-          animation: rainbow 2s linear infinite;
-          border-radius: 10px;
-          border-width: 1px !important;
-          border-style: solid;
+        .rainbow-ring {
+          animation: rainbow-ring 2s linear infinite;
         }
-        @keyframes rainbow {
-          0% {
-            border-color: red;
-          }
-          16% {
-            border-color: orange;
-          }
-          33% {
-            border-color: yellow;
-          }
-          50% {
-            border-color: green;
-          }
-          66% {
-            border-color: blue;
-          }
-          83% {
-            border-color: indigo;
-          }
-          100% {
-            border-color: violet;
-          }
+        @keyframes rainbow-ring {
+          0%   { box-shadow: 0 0 0 2px red; }
+          16%  { box-shadow: 0 0 0 2px orange; }
+          33%  { box-shadow: 0 0 0 2px yellow; }
+          50%  { box-shadow: 0 0 0 2px green; }
+          66%  { box-shadow: 0 0 0 2px blue; }
+          83%  { box-shadow: 0 0 0 2px indigo; }
+          100% { box-shadow: 0 0 0 2px violet; }
         }
       `}</style>
         </div>
