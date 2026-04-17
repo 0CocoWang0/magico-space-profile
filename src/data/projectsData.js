@@ -31,6 +31,33 @@ const projects = [
     timeline: "Dec 2025 – Present",
   },
   {
+    bait: "Director of Communications · CogSURF",
+    title: "COGSURF",
+    image: "/images/mdx/cogsurf/cogsurf-header.png",
+    description:
+      "Rebuilt CogSURF's communications from the ground up: automated email pipeline (10× outreach capacity), refreshed website, and a structured content system that doubled account reach.",
+    tag: [
+      "📣 Communications",
+      "💻 Website",
+      "Email Automation",
+      "Content Strategy",
+      "Branding",
+    ],
+    status: "View Project",
+    clickable: true,
+    slug: "cogsurf",
+    links: [
+      {
+        href: "https://www.cogsurf.org",
+        label: "Visit CogSURF",
+      },
+    ],
+    location: "Montreal",
+    role: "Director of Communications",
+    tools: "Figma, Email Automation, Instagram, LinkedIn",
+    timeline: "Sep 2025 – Present",
+  },
+  {
     bait: "BOLT Case Competition · 3rd Place",
     title: "BOUNCE CENTRAL",
     image: "/images/mdx/bounce/bounce-screens.png",

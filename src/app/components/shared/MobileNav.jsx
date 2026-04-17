@@ -15,6 +15,7 @@ const CIRCLE_Y_OFFSET = -280;
 
 export default function MobileNav({ activeSlug = "hero", setActiveSlug }) {
     const [isOpen, setIsOpen] = useState(false);
+    const [tappedSlug, setTappedSlug] = useState(null);
     const activeIndex = Math.max(
         0,
         navLinks.findIndex((l) => l.slug === activeSlug)
@@ -29,6 +30,16 @@ export default function MobileNav({ activeSlug = "hero", setActiveSlug }) {
         if (setActiveSlug) setActiveSlug(slug);
         window.location.hash = slug;
         setIsOpen(false);
+    };
+
+    const handleTap = (i, slug) => {
+        if (tappedSlug) return;
+        setCenterIndex(i);
+        setTappedSlug(slug);
+        setTimeout(() => {
+            handleNav(slug);
+            setTappedSlug(null);
+        }, 450);
     };
 
     const handlePanEnd = (e, info) => {
@@ -154,20 +165,28 @@ export default function MobileNav({ activeSlug = "hero", setActiveSlug }) {
                                         key={link.slug}
                                         onClick={(e) => {
                                             e.stopPropagation();
-                                            setCenterIndex(i);
-                                            handleNav(link.slug);
+                                            handleTap(i, link.slug);
                                         }}
-                                        animate={{
-                                            left: cx + dx,
-                                            top: cy + dy,
-                                            opacity: isCenter ? 1 : 0.3,
-                                            scale: isCenter ? 1 : 0.75,
-                                        }}
-                                        transition={{
-                                            type: "spring",
-                                            stiffness: 280,
-                                            damping: 26,
-                                        }}
+                                        animate={
+                                            tappedSlug === link.slug
+                                                ? {
+                                                    left: cx,
+                                                    top: cy + RADIUS,
+                                                    opacity: 1,
+                                                    scale: 1.4,
+                                                }
+                                                : {
+                                                    left: cx + dx,
+                                                    top: cy + dy,
+                                                    opacity: isCenter ? 1 : 0.3,
+                                                    scale: isCenter ? 1 : 0.75,
+                                                }
+                                        }
+                                        transition={
+                                            tappedSlug === link.slug
+                                                ? { duration: 0.45, ease: [0.22, 1, 0.36, 1] }
+                                                : { type: "spring", stiffness: 280, damping: 26 }
+                                        }
                                         className={`absolute whitespace-nowrap text-base -translate-x-1/2 -translate-y-1/2 ${isCenter && isActive
                                             ? "text-white font-semibold"
                                             : "text-white"
