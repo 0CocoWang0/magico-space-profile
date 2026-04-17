@@ -11,7 +11,6 @@ import FilterIcon from "../../../../../public/images/nav/filter-shape.svg"
 import SearchIcon from "../../../../../public/images/nav/search-shape.svg"
 import FancyButton from "../../shared/FancyButton"
 import ProjectCard from "../../sections/notion/ProjectCard"
-import FloatingWrapper from '../../shared/FloatingWrapper'
 
 const breakpointColumnsObj = {
     default: 3,
@@ -113,16 +112,7 @@ const NotionSection = ({ slug, setActiveSlug }) => {
 
     return (
 
-        <div className='flex flex-col justify-center items-center'>
-            <div className='h-50 sm:h-80 w-[65vw] lg:w-[95vw]'>
-                <FloatingWrapper floatSpeed={0.3}>
-                    <img
-                        src={"/images/heroImg/bigprojects.png"}
-                        draggable={false}
-                        className="w-full h-50 sm:h-80 object-contain object-center"
-                    />
-                </FloatingWrapper>
-            </div>
+        <div className='flex flex-col justify-center items-center pt-24'>
             <div className='sm:max-w-[60vw] w-[95vw]'>
                 <div className='w-full sticky top-[55px] z-10'>
 

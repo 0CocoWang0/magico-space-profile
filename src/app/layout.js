@@ -2,6 +2,9 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Cursor from "./components/shared/Cursor";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata = {
   metadataBase: new URL("https://magico-space.vercel.app/"),
@@ -58,8 +61,8 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="cursor-none overflow-x-hidden">
+    <html lang="en" className={inter.variable}>
+      <body className="cursor-none overflow-x-hidden font-sans">
         <Cursor />
         <main className="cursor-none scroll-smooth">{children}</main>
         <Analytics />

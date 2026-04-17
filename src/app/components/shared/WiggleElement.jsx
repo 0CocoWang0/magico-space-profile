@@ -2,14 +2,17 @@
 import React from 'react'
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 
-const WiggleElement = ({ children, className }) => {
+const WiggleElement = ({ children, className, intensity = 1 }) => {
     const x = useMotionValue(0);
     const y = useMotionValue(0);
 
-    const rotateX = useTransform(y, [-200, 200], [-100, 100]); 
-    const rotateY = useTransform(x, [-200, 200], [100, -100]);
-    const moveX = useTransform(x, [-200, 200], [-100, 100]);
-    const moveY = useTransform(y, [-200, 200], [-100, 100]);
+    const rotateRange = 100 * intensity;
+    const moveRange = 100 * intensity;
+
+    const rotateX = useTransform(y, [-200, 200], [-rotateRange, rotateRange]);
+    const rotateY = useTransform(x, [-200, 200], [rotateRange, -rotateRange]);
+    const moveX = useTransform(x, [-200, 200], [-moveRange, moveRange]);
+    const moveY = useTransform(y, [-200, 200], [-moveRange, moveRange]);
 
 
     const springX = useSpring(rotateX, { stiffness: 80, damping: 6 });

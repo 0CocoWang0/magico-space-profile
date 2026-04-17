@@ -60,19 +60,19 @@ export default function Exp({ slug }) {
 
     if (!project) return <div>Not found</div>
     return (
-        <article className="prose w-full relative">
+        <article className="prose w-full relative pt-24">
             <div>
                 <img
                     src={project.image}
                     alt={`${project.title} icon`}
                     draggable={false}
-                    className="w-full h-80 object-cover object-center sticky top-0 z-10"
+                    className="w-full h-80 object-cover object-center sticky top-24 z-10"
                 />
                 <div className="flex flex-col sm:flex-row p-[5vw] gap-10 relative z-20 bg-[#0f0f0f] h-full">
 
                     {/* Left row */}
                     <div className='sm:w-1/3'>
-                        <div className='sticky top-20'>
+                        <div className='sticky top-50'>
                             <h1 className='text-2xl'>{project.title}</h1>
                             <p className='my-3 text-[#979797]'>{project.location}</p>
                             {!isMobile && (

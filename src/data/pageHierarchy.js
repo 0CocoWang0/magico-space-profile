@@ -5,6 +5,11 @@ export const pageTree = {
     parent: null,
     image: "/images/heroImg/exp.jpeg",
   },
+  play: {
+    title: "Play",
+    parent: null,
+    image: "/images/nav/goout.png",
+  },
 
   pearl: {
     title: "Pearl",
