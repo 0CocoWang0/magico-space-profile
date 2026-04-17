@@ -200,7 +200,7 @@ export default function HeroSection({ setActiveSlug }) {
                     >
                         <p>Designer</p>
                         <p>Engineer</p>
-                        <p>Product</p>
+                        <p>Product Thinker</p>
                         <p>Artist</p>
                     </motion.div>
                 </div>
