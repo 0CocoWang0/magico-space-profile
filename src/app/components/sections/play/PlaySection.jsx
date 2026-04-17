@@ -89,7 +89,12 @@ export default function PlaySection({ activeSlug, setActiveSlug }) {
                         <InfoLogo />
                     </div>
                     <p>
-                        Designed, Developed by Keming Wang. Last updated April 16, 2026
+                        Designed, Developed by Keming Wang with the help of{" "}
+                        <span className="inline-flex items-center gap-1 align-middle">
+                            <img src="/images/icon/Claude_AI_symbol.svg" alt="Claude" className="w-3 h-3" />
+                            Claude
+                        </span>
+                        . Last updated April 16, 2026
                     </p>
 
                 </div>

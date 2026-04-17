@@ -69,8 +69,11 @@ const BouncingImage = ({ images = defaultImages, className = '', initialIndex = 
     };
 
     return (
-        <div className={`relative inline-block ${rounded} ${className} ${highlight ? 'rainbow-ring' : ''}`}>
-
+        <div className={`relative inline-block ${rounded} ${className}`}>
+            <div
+                aria-hidden
+                className={`absolute inset-0 pointer-events-none rainbow-ring ${rounded} transition-opacity duration-500 ease-out ${highlight ? 'opacity-100' : 'opacity-0'}`}
+            />
             <button className='flex justify-center'>
                 <img
                     ref={imgRef}
@@ -100,13 +103,9 @@ const BouncingImage = ({ images = defaultImages, className = '', initialIndex = 
           animation: rainbow-ring 2s linear infinite;
         }
         @keyframes rainbow-ring {
-          0%   { box-shadow: 0 0 0 2px red; }
-          16%  { box-shadow: 0 0 0 2px orange; }
-          33%  { box-shadow: 0 0 0 2px yellow; }
-          50%  { box-shadow: 0 0 0 2px green; }
-          66%  { box-shadow: 0 0 0 2px blue; }
-          83%  { box-shadow: 0 0 0 2px indigo; }
-          100% { box-shadow: 0 0 0 2px violet; }
+          0%   { box-shadow: 0 0 0 2px #7bf1a8; }
+          50%  { box-shadow: 0 0 0 2px #ffffff; }
+          100% { box-shadow: 0 0 0 2px #7bf1a8; }
         }
       `}</style>
         </div>
