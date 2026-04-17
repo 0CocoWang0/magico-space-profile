@@ -1,6 +1,6 @@
 const projects = [
   {
-    bait: "Product Designer & Engineer · Trove (Startup, Beta)",
+    bait: "Product Designer & Engineer · Trove",
     title: "TROVE",
     image: "/images/mdx/trove/trove-screens.png",
     description:
