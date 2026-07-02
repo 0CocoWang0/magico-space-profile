@@ -21,11 +21,11 @@ export default function HeroHeader({ activeSlug = "hero", setActiveSlug }) {
                 hour: "2-digit",
                 minute: "2-digit",
                 hour12: false,
-                timeZone: "America/Toronto",
+                timeZone: "America/Vancouver",
             });
             setTime(timeStr);
-            const torontoHour = parseInt(timeStr.slice(0, 2), 10) % 24;
-            setIsNight(torontoHour < 6 || torontoHour >= 18);
+            const vancouverHour = parseInt(timeStr.slice(0, 2), 10) % 24;
+            setIsNight(vancouverHour < 6 || vancouverHour >= 18);
         };
         updateTime();
         const id = setInterval(updateTime, 30000);
@@ -97,7 +97,7 @@ export default function HeroHeader({ activeSlug = "hero", setActiveSlug }) {
 
             <div className="text-right text-xs sm:text-sm text-white/80 leading-tight space-y-1">
                 <div className="flex items-center justify-end gap-2">
-                    <span>Montreal, CA</span>
+                    <span>Vancouver, BC</span>
                     <img src="/images/nav/pin.jpg" alt="" className="w-3 h-3" />
                 </div>
                 <div className="flex items-center justify-end gap-2 relative h-[15px]">
