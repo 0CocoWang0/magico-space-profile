@@ -134,7 +134,7 @@ const projects = [
     location: "",
     role: "UI/UX Designer, Frontend Developer",
     tools: "Figma, Next.js, Supabase",
-    timeline: "Ongoing (2025-Present)",
+    timeline: "2025.06-2025.09",
   },
   {
     bait: "Undergraduate Researcher – Computational Neuroscience & Data Analytics",
